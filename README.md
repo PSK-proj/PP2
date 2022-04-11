@@ -16,11 +16,11 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 - [X] Omówienie pomysłów na realizację projektu,
 - [X] Przygotowanie środowiska programistycznego „Visual Studio 2022”,
 - [X] Przygotowanie repozytorium w serwisie „GitHub”,
-- [ ] Zapoznanie z dokumentacją bibliotek Allegro oraz OpenGL, wybranie jednej z nich,
-- [ ] Stworzenie logiki interakcji z użytkownikiem (wybór poziomu trudności),
-- [ ] Stworzenie logiki losowania bomb na planszy,
-- [ ] Stworzenie logiki wykrywania ilości bomb wokół danego pola (jeśli pole nie jest bombą),
-- [ ] Testy poprawności działania,
+- [X] Zapoznanie z dokumentacją bibliotek Allegro oraz OpenGL, wybranie jednej z nich,
+- [X] Stworzenie logiki interakcji z użytkownikiem (wybór poziomu trudności),
+- [X] Stworzenie logiki losowania bomb na planszy,
+- [X] Stworzenie logiki wykrywania ilości bomb wokół danego pola (jeśli pole nie jest bombą),
+- [X] Testy poprawności działania,
 - [ ] Przygotowanie części grafik,
 - [ ] Sporządzenie sprawozdania z postępów prac nad projektem.
 
