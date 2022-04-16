@@ -21,8 +21,8 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 - [X] Stworzenie logiki losowania bomb na planszy,
 - [X] Stworzenie logiki wykrywania ilości bomb wokół danego pola (jeśli pole nie jest bombą),
 - [X] Testy poprawności działania,
-- [ ] Przygotowanie części grafik,
-- [ ] Sporządzenie sprawozdania z postępów prac nad projektem.
+- [X] Przygotowanie części grafik,
+- [X] Sporządzenie sprawozdania z postępów prac nad projektem.
 
 ### Drugi kamień milowy
 
