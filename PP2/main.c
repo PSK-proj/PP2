@@ -82,11 +82,7 @@ void set_field_numbers(int** tab, unsigned char x, unsigned char y, unsigned sho
 			pos_y = y_b + y_b_p -1;
 			pos_x = x_b + x_b_p -1;
 
-			if (pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1)
-				continue;
-			else if (tab[pos_y][pos_x] == -1)
-				continue;
-			else
+			if (!(pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1 || tab[pos_y][pos_x] == -1))
 				tab[pos_y][pos_x] += 1;
 		}
 	}
