@@ -12,7 +12,7 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 ### Pierwszy kamień milowy
 
 - [X] Przygotowanie harmonogramu i podziału prac w zespole,
-- [X] Przeszkolenie członków zespołu odnośnie zasad gry w sapera, ćwiczenia praktyczne.
+- [X] Przeszkolenie członków zespołu odnośnie zasad gry w sapera, ćwiczenia praktyczne,
 - [X] Omówienie pomysłów na realizację projektu,
 - [X] Przygotowanie środowiska programistycznego „Visual Studio 2022”,
 - [X] Przygotowanie repozytorium w serwisie „GitHub”,
