@@ -5,11 +5,16 @@
 	- niestand. min: 9x9, 10bomb; max: 30x24, 667 bomb
 
 	ZASADY
-	- bomba = -1 wartoœæ pola
-	- pole obok co najmniej 1 bomby = iloœæ bomb wokó³
-	- pole bez bomb wokó³ = 0
+	- bomba = -1 wartoÅ›Ä‡ pola
+	- pole obok co najmniej 1 bomby = iloÅ›Ä‡ bomb wokÃ³Å‚
+	- pole bez bomb wokï¿½ = 0
 
-	przegrana - punkty zliczone z ods³oniêtych pól zmniejszy³y siê (wybrano bombê, czyli -1)
+	przegrana - punkty zliczone z odsÅ‚oniÄ™tych pÃ³l zmniejszyÅ‚y siÄ™ (wybrano bombÄ™, czyli -1)
+
+	LISTA ODSÅONIÄ˜TYCH
+	- 0 - nieodsÅ‚oniÄ™te
+	- 10 - odsÅ‚oniÄ™te
+	- -2 - flaga
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -112,20 +117,20 @@ int **create_board(unsigned char x, unsigned char y)
 
 	p = (int**)malloc(
 		sizeof(int*) * y + //tab ptr
-		sizeof(int) * y * x //tab int * iloœæ wierszy
+		sizeof(int) * y * x //tab int * iloï¿½ï¿½ wierszy
 	);
 
-	temp = (int*)&p[y]; // y - ostatni element tablicy wskaŸników
+	temp = (int*)&p[y]; // y - ostatni element tablicy wskaï¿½nikï¿½w
 	for (int i = 0; i < y; i++)
 	{
 		p[i] = temp;
-		temp += x; // x - wielkoœæ wiersza
+		temp += x; // x - wielkoï¿½ï¿½ wiersza
 	}
 
 	return p;
 }
 
-void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsigned char* mode)
+void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsigned char* mode, unsigned short* margin_x, unsigned short* margin_y)
 {
 	switch (*mode)
 	{
@@ -133,21 +138,29 @@ void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsig
 		*x = 9;
 		*y = 9;
 		*bombs = 10;
+		*margin_x = 365;
+		*margin_y = 265;
 		break;
 	case 2:
 		*x = 16;
 		*y = 16;
 		*bombs = 40;
+		*margin_x = 260;
+		*margin_y = 160;
 		break;
 	case 3:
 		*x = 30;
 		*y = 16;
 		*bombs = 99;
+		*margin_x = 50;
+		*margin_y = 160;
 		break;
 	default:
 		*x = 9;
 		*y = 9;
 		*bombs = 10;
+		*margin_x = 365;
+		*margin_y = 265;
 		break;
 	}
 }
@@ -166,9 +179,9 @@ void allegro_display_menu()
 	mode3 = al_load_bitmap("img\\mode3.bmp");
 
 	al_draw_bitmap(baner, 0, 0, 0);
-	al_draw_bitmap(mode1, 370, 160, 0);
-	al_draw_bitmap(mode2, 370, 260, 0);
-	al_draw_bitmap(mode3, 370, 360, 0);
+	al_draw_bitmap(mode1, 370, 200, 0);
+	al_draw_bitmap(mode2, 370, 300, 0);
+	al_draw_bitmap(mode3, 370, 400, 0);
 
 	al_flip_display();
 
@@ -176,6 +189,74 @@ void allegro_display_menu()
 	al_destroy_bitmap(mode1);
 	al_destroy_bitmap(mode2);
 	al_destroy_bitmap(mode3);
+}
+
+void allegro_draw_fields(int** tab, int** clicked, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y)
+{
+	ALLEGRO_BITMAP* hidden;
+	ALLEGRO_BITMAP* flag;
+	ALLEGRO_BITMAP* bomb;
+	ALLEGRO_BITMAP* empty;
+	ALLEGRO_BITMAP* one;
+	ALLEGRO_BITMAP* two;
+	ALLEGRO_BITMAP* three;
+	ALLEGRO_BITMAP* four;
+	ALLEGRO_BITMAP* five;
+	ALLEGRO_BITMAP* six;
+	ALLEGRO_BITMAP* seven;
+	ALLEGRO_BITMAP* eight;
+
+	hidden = al_load_bitmap("img\\hidden.bmp");
+	flag = al_load_bitmap("img\\flag.bmp");
+	bomb = al_load_bitmap("img\\bomb.bmp");
+	empty = al_load_bitmap("img\\empty.bmp");
+	one = al_load_bitmap("img\\1.bmp");
+	two = al_load_bitmap("img\\2.bmp");
+	three = al_load_bitmap("img\\3.bmp");
+	four = al_load_bitmap("img\\4.bmp");
+	five = al_load_bitmap("img\\5.bmp");
+	six = al_load_bitmap("img\\6.bmp");
+	seven = al_load_bitmap("img\\7.bmp");
+	eight = al_load_bitmap("img\\8.bmp");
+
+	for (int i = 0; i < y; i++)
+		for (int j = 0; j < x; j++)
+		{
+			if (clicked[i][j] == 0)
+				al_draw_bitmap(hidden, margin_x + j*30, margin_y + i*30, 0);
+			else if(clicked[i][j] == -2)
+				al_draw_bitmap(flag, margin_x + j * 30, margin_y + i * 30, 0);
+			else if (clicked[i][j] == 10)
+			{
+				switch (tab[i][j])
+				{
+				case -1: al_draw_bitmap(bomb, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 0: al_draw_bitmap(empty, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 1: al_draw_bitmap(one, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 2: al_draw_bitmap(two, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 3: al_draw_bitmap(three, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 4: al_draw_bitmap(four, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 5: al_draw_bitmap(five, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 6: al_draw_bitmap(six, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 7: al_draw_bitmap(seven, margin_x + j * 30, margin_y + i * 30, 0); break;
+				case 8: al_draw_bitmap(eight, margin_x + j * 30, margin_y + i * 30, 0); break;
+				}
+			}
+		}
+
+
+	al_destroy_bitmap(hidden);
+	al_destroy_bitmap(flag);
+	al_destroy_bitmap(bomb);
+	al_destroy_bitmap(empty);
+	al_destroy_bitmap(one);
+	al_destroy_bitmap(two);
+	al_destroy_bitmap(three);
+	al_destroy_bitmap(four);
+	al_destroy_bitmap(five);
+	al_destroy_bitmap(six);
+	al_destroy_bitmap(seven);
+	al_destroy_bitmap(eight);
 }
 
 int main()
@@ -191,8 +272,10 @@ int main()
 
 	unsigned char running = 1;
 	unsigned char mode = 0;
+	unsigned short margin_x = 0, margin_y = 0;
 
 	int** p = NULL; //plansza
+	int** clicked = NULL;
 	unsigned short* bombs_list = NULL; //tablica pozycji bomb
 	unsigned char x, y;
 	unsigned short bombs;
@@ -203,7 +286,7 @@ int main()
 	al_init_image_addon();
 	al_install_mouse();
 
-	display = al_create_display(1000,560);
+	display = al_create_display(1000,650);
 	queue = al_create_event_queue();
 	timer = al_create_timer(1.0 / 60);
 	baner = al_load_bitmap("img\\baner.bmp");
@@ -219,7 +302,7 @@ int main()
 	allegro_display_menu();
 
 
-	// GRAFICZNE WYŒWIETLANIE
+	// GRAFICZNE WYÅšWIETLANIE
 	while (running == 1)
 	{
 
@@ -235,34 +318,38 @@ int main()
 
 		if (event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
-			if (mode == 0) // WYBIERANIE TRUDNOŒCI
+			if (mode == 0) // WYBIERANIE TRUDNOÅšCI
 			{
-				if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 160 && mouse_y <= 240) mode = 1;
-				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 260 && mouse_y <= 340) mode = 2;
-				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 360 && mouse_y <= 440) mode = 3;
+				if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 200 && mouse_y <= 280) mode = 1;
+				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 300 && mouse_y <= 380) mode = 2;
+				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 400 && mouse_y <= 480) mode = 3;
 
 				if (mode != 0)
 				{
-					lvl_select(&x, &y, &bombs, &mode);
+					lvl_select(&x, &y, &bombs, &mode, &margin_x, &margin_y);
+					
 					p = create_board(x, y);
+					clicked = create_board(x, y);
 					bombs_list = create_bombs_list(bombs);
-					clear_board(p, x, y);
 
+					clear_board(p, x, y);
+					clear_board(clicked, x, y);
 
 					bombs_draw(p, x, y, bombs, bombs_list);
-					set_field_numbers(p, x, y, bombs, bombs_list); //Tu s¹ tak¿e wypisywanie koordynaty bomb
+					set_field_numbers(p, x, y, bombs, bombs_list); //Tu sÄ… takÅ¼e wypisywanie koordynaty bomb
 
 					printf("\n\n--------------------------------\n\n");
 					wypisz(p, x, y);
 					printf("\n--------------------------------\n\n");
 
-					al_clear_to_color(al_map_rgb(0, 0, 0));
+
+					al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
 					al_draw_bitmap(baner, 0, 0, 0);
 				}
 			}
-			else // PEWNIE ODKRYWANIE PÓL
+			else // PEWNIE ODKRYWANIE PÃ“L
 			{
-				// dodaj klikniête pole do tablicy klikniêtych pól (zmieñ wartoœæ w komórce o klikniêtych koordynatach [tak jak lista bomb / a mo¿e i dwuwymiarowo] na inn¹ ni¿ nieklikniête)
+				// dodaj klikniÄ™te pole do tablicy klikniÄ™tych pÃ³l (zmieÅ„ wartoÅ›Ä‡ w komÃ³rce o klikniÄ™tych koordynatach [tak jak lista bomb / a moÅ¼e i dwuwymiarowo] na innÄ… niÅ¼ nieklikniÄ™te)
 			}
 		}
 
@@ -271,8 +358,8 @@ int main()
 		{
 			if(mode != 0)
 			{
-
-				//funkjca rysuj¹ca na podstawie tablicy klikniêtych i tablicy 'p'
+				//funkjca rysujÄ…ca na podstawie tablicy klikniÄ™tych i tablicy 'p'
+				allegro_draw_fields(p, clicked, x, y, margin_x, margin_y);
 				al_flip_display();
 			}
 		}
@@ -280,7 +367,7 @@ int main()
 
 
 
-	// Sprz¹tanie pamiêci
+	// SprzÄ…tanie pamiÄ™ci
 
 	al_destroy_display(display);
 	al_destroy_timer(timer);
