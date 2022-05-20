@@ -259,6 +259,56 @@ void allegro_draw_fields(int** tab, int** clicked, unsigned char x, unsigned cha
 	al_destroy_bitmap(eight);
 }
 
+int allegro_field_click(int** tab, int** clicked, unsigned short bombs, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y, float mouse_x, float mouse_y, ALLEGRO_EVENT* event, short* bombs_remain, unsigned short* clicks_made)
+{
+	int clicked_x = (mouse_x - margin_x) / 30;
+	int clicked_y = (mouse_y - margin_y) / 30;
+	if (clicked_x >= 0 && clicked_x < x && mouse_x - margin_x >= 0 && clicked_y >= 0 && clicked_y < y && mouse_y - margin_y >= 0)
+	{
+		if (event->mouse.button & 1 && clicked[clicked_y][clicked_x] != -2 && clicked[clicked_y][clicked_x] != 10)
+		{
+				clicked[clicked_y][clicked_x] = 10;
+				if (tab[clicked_y][clicked_x] == -1)
+				{
+					for (int i = 0; i < y; i++)
+						for (int j = 0; j < x; j++)
+							clicked[i][j] = 10;
+					return -1;
+				}
+				*clicks_made = *clicks_made + 1;
+				if (*clicks_made == (x * y) - bombs) return 1;
+		}
+		if (event->mouse.button & 2 && clicked[clicked_y][clicked_x] != 10) //stawianie flagi
+		{
+			if (clicked[clicked_y][clicked_x] == 0)
+			{
+				clicked[clicked_y][clicked_x] = -2;
+				*bombs_remain = *bombs_remain-1;
+			}
+			else if (clicked[clicked_y][clicked_x] == -2)
+			{
+				clicked[clicked_y][clicked_x] = 0;
+				*bombs_remain = *bombs_remain + 1;
+			}
+		}
+	}
+	return 0;
+}
+
+void allegro_display_win()
+{
+	al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
+	ALLEGRO_BITMAP* baner;
+	ALLEGRO_BITMAP* win;
+	baner = al_load_bitmap("img\\baner.bmp");
+	win = al_load_bitmap("img\\win.bmp");
+	al_draw_bitmap(baner, 0, 0, 0);
+	al_draw_bitmap(win, 0, 80, 0);
+	al_flip_display();
+	al_destroy_bitmap(baner);
+	al_destroy_bitmap(win);
+}
+
 int main()
 {
 	system("CHCP 1250 >NUL");
@@ -273,12 +323,15 @@ int main()
 	unsigned char running = 1;
 	unsigned char mode = 0;
 	unsigned short margin_x = 0, margin_y = 0;
+	unsigned short clicks_made = 0;
+	int game_state = 0; // 0 - w trakcie, 1 - wygrana, -1 - przegrana
 
 	int** p = NULL; //plansza
 	int** clicked = NULL;
 	unsigned short* bombs_list = NULL; //tablica pozycji bomb
 	unsigned char x, y;
 	unsigned short bombs;
+	short bombs_remain;
 
 	float mouse_x = 0, mouse_y = 0;
 
@@ -337,7 +390,7 @@ int main()
 
 					bombs_draw(p, x, y, bombs, bombs_list);
 					set_field_numbers(p, x, y, bombs, bombs_list); //Tu są także wypisywanie koordynaty bomb
-
+					bombs_remain = bombs;
 					printf("\n\n--------------------------------\n\n");
 					wypisz(p, x, y);
 					printf("\n--------------------------------\n\n");
@@ -347,9 +400,12 @@ int main()
 					al_draw_bitmap(baner, 0, 0, 0);
 				}
 			}
-			else // PEWNIE ODKRYWANIE PÓL
+			else if(mode == 1 || mode == 2 || mode == 3) // PEWNIE ODKRYWANIE PÓL
 			{
 				// dodaj kliknięte pole do tablicy klikniętych pól (zmień wartość w komórce o klikniętych koordynatach [tak jak lista bomb / a może i dwuwymiarowo] na inną niż niekliknięte)
+				game_state = allegro_field_click(p, clicked, bombs, x, y, margin_x, margin_y, mouse_x, mouse_y, &event, &bombs_remain, &clicks_made);
+				printf("bombs: %hi\n", bombs_remain);
+				
 			}
 		}
 
@@ -360,6 +416,14 @@ int main()
 			{
 				//funkjca rysująca na podstawie tablicy klikniętych i tablicy 'p'
 				allegro_draw_fields(p, clicked, x, y, margin_x, margin_y);
+				if(game_state == 1)
+				{
+					mode = 10;
+					allegro_display_win();
+				}
+				else if (game_state == -1)
+					mode = 10;
+
 				al_flip_display();
 			}
 		}
