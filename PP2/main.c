@@ -21,6 +21,9 @@
 #include <time.h>
 #include <Windows.h>
 
+#include <allegro5/allegro5.h>
+#include <allegro5/allegro_image.h>
+
 void wypisz(int** tab, unsigned char x, unsigned char y)
 {
 	for (int i = 0; i < y; i++)
@@ -122,10 +125,9 @@ int **create_board(unsigned char x, unsigned char y)
 	return p;
 }
 
-void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs)
+void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsigned char* mode)
 {
-	unsigned char mode = 3; // DOCELOWO OBLOKOWAÆ
-	switch (mode)
+	switch (*mode)
 	{
 	case 1:
 		*x = 9;
@@ -150,29 +152,139 @@ void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs)
 	}
 }
 
+
+void allegro_display_menu()
+{
+	ALLEGRO_BITMAP* baner;
+	ALLEGRO_BITMAP* mode1;
+	ALLEGRO_BITMAP* mode2;
+	ALLEGRO_BITMAP* mode3;
+
+	baner = al_load_bitmap("img\\baner.bmp");
+	mode1 = al_load_bitmap("img\\mode1.bmp");
+	mode2 = al_load_bitmap("img\\mode2.bmp");
+	mode3 = al_load_bitmap("img\\mode3.bmp");
+
+	al_draw_bitmap(baner, 0, 0, 0);
+	al_draw_bitmap(mode1, 370, 160, 0);
+	al_draw_bitmap(mode2, 370, 260, 0);
+	al_draw_bitmap(mode3, 370, 360, 0);
+
+	al_flip_display();
+
+	al_destroy_bitmap(baner);
+	al_destroy_bitmap(mode1);
+	al_destroy_bitmap(mode2);
+	al_destroy_bitmap(mode3);
+}
+
 int main()
 {
 	system("CHCP 1250 >NUL");
 	srand(time(NULL));
 
-	int** p; //plansza
-	unsigned short* bombs_list; //tablica pozycji bomb
+	ALLEGRO_DISPLAY* display;
+	ALLEGRO_EVENT_QUEUE* queue;
+	ALLEGRO_TIMER* timer;
+	ALLEGRO_BITMAP* baner;
+
+
+	unsigned char running = 1;
+	unsigned char mode = 0;
+
+	int** p = NULL; //plansza
+	unsigned short* bombs_list = NULL; //tablica pozycji bomb
 	unsigned char x, y;
 	unsigned short bombs;
 
-	lvl_select(&x, &y, &bombs);
+	float mouse_x = 0, mouse_y = 0;
 
-	p = create_board(x, y);
-	bombs_list = create_bombs_list(bombs);
-	clear_board(p, x, y);
-	
+	al_init();
+	al_init_image_addon();
+	al_install_mouse();
 
-	bombs_draw(p, x, y, bombs, bombs_list);
-	set_field_numbers(p, x, y, bombs, bombs_list); //Tu s¹ tak¿e wypisywanie koordynaty bomb
+	display = al_create_display(1000,560);
+	queue = al_create_event_queue();
+	timer = al_create_timer(1.0 / 60);
+	baner = al_load_bitmap("img\\baner.bmp");
 
-	printf("\n\n--------------------------------\n\n");
-	wypisz(p, x, y);
-	printf("\n--------------------------------\n\n");
+
+	al_register_event_source(queue, al_get_display_event_source(display));
+	al_register_event_source(queue, al_get_timer_event_source(timer));
+	al_register_event_source(queue, al_get_mouse_event_source());
+
+
+	al_start_timer(timer);
+
+	allegro_display_menu();
+
+
+	// GRAFICZNE WYŒWIETLANIE
+	while (running == 1)
+	{
+
+		ALLEGRO_EVENT event;
+		al_wait_for_event(queue, &event);
+
+		if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) running = 0;
+		if (event.type == ALLEGRO_EVENT_MOUSE_AXES)
+		{
+			mouse_x = event.mouse.x;
+			mouse_y = event.mouse.y;
+		}
+
+		if (event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
+		{
+			if (mode == 0) // WYBIERANIE TRUDNOŒCI
+			{
+				if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 160 && mouse_y <= 240) mode = 1;
+				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 260 && mouse_y <= 340) mode = 2;
+				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 360 && mouse_y <= 440) mode = 3;
+
+				if (mode != 0)
+				{
+					lvl_select(&x, &y, &bombs, &mode);
+					p = create_board(x, y);
+					bombs_list = create_bombs_list(bombs);
+					clear_board(p, x, y);
+
+
+					bombs_draw(p, x, y, bombs, bombs_list);
+					set_field_numbers(p, x, y, bombs, bombs_list); //Tu s¹ tak¿e wypisywanie koordynaty bomb
+
+					printf("\n\n--------------------------------\n\n");
+					wypisz(p, x, y);
+					printf("\n--------------------------------\n\n");
+
+					al_clear_to_color(al_map_rgb(0, 0, 0));
+					al_draw_bitmap(baner, 0, 0, 0);
+				}
+			}
+			else // PEWNIE ODKRYWANIE PÓL
+			{
+				// dodaj klikniête pole do tablicy klikniêtych pól (zmieñ wartoœæ w komórce o klikniêtych koordynatach [tak jak lista bomb / a mo¿e i dwuwymiarowo] na inn¹ ni¿ nieklikniête)
+			}
+		}
+
+
+		if(event.type == ALLEGRO_EVENT_TIMER)
+		{
+			if(mode != 0)
+			{
+
+				//funkjca rysuj¹ca na podstawie tablicy klikniêtych i tablicy 'p'
+				al_flip_display();
+			}
+		}
+	}
+
+
+
+	// Sprz¹tanie pamiêci
+
+	al_destroy_display(display);
+	al_destroy_timer(timer);
+	al_destroy_bitmap(baner);
 
 
 	free(bombs_list);
