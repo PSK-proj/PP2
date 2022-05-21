@@ -26,15 +26,15 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 
 ### Drugi kamień milowy
 
-- [ ] Kontynuacja tworzenia grafik,
-- [ ] Generowanie graficzne planszy,
-- [ ] Stworzenie licznika czasu i bomb,
-- [ ] Umieszczenie elementów na planszy,
-- [ ] Dodanie obsługi kliknięć (odkrywanie pól), oznaczeń bomby (flagi),
-- [ ] Połączenie części wizualnej z logiką programu,
-- [ ] Wykrycie wygranej/przegranej.
-- [ ] Testy poprawności działania,
-- [ ] Przygotowanie sprawozdania z postępów prac nad projektem.
+- [X] Kontynuacja tworzenia grafik,
+- [X] Generowanie graficzne planszy,
+- [X] Stworzenie licznika czasu i bomb,
+- [X] Umieszczenie elementów na planszy,
+- [X] Dodanie obsługi kliknięć (odkrywanie pól), oznaczeń bomby (flagi),
+- [X] Połączenie części wizualnej z logiką programu,
+- [X] Wykrycie wygranej/przegranej.
+- [X] Testy poprawności działania,
+- [X] Przygotowanie sprawozdania z postępów prac nad projektem.
 
 
 ### I termin
