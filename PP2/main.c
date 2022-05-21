@@ -2,14 +2,11 @@
 	- 9x9, 10 bomb
 	- 16x16, 40 bomb
 	- 30x16, 99 bomb
-	- niestand. min: 9x9, 10bomb; max: 30x24, 667 bomb
 
 	ZASADY
 	- bomba = -1 wartość pola
 	- pole obok co najmniej 1 bomby = ilość bomb wokół
-	- pole bez bomb wok� = 0
-
-	przegrana - punkty zliczone z odsłoniętych pól zmniejszyły się (wybrano bombę, czyli -1)
+	- pole bez bomb wokół = 0
 
 	LISTA ODSŁONIĘTYCH
 	- 0 - nieodsłonięte
@@ -28,6 +25,8 @@
 
 #include <allegro5/allegro5.h>
 #include <allegro5/allegro_image.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_font.h>
 
 void wypisz(int** tab, unsigned char x, unsigned char y)
 {
@@ -259,7 +258,45 @@ void allegro_draw_fields(int** tab, int** clicked, unsigned char x, unsigned cha
 	al_destroy_bitmap(eight);
 }
 
-int allegro_field_click(int** tab, int** clicked, unsigned short bombs, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y, float mouse_x, float mouse_y, ALLEGRO_EVENT* event, short* bombs_remain, unsigned short* clicks_made)
+void allegro_display_win()
+{
+	al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
+	ALLEGRO_BITMAP* baner;
+	ALLEGRO_BITMAP* win;
+	baner = al_load_bitmap("img\\baner.bmp");
+	win = al_load_bitmap("img\\win.bmp");
+	al_draw_bitmap(baner, 0, 0, 0);
+	al_draw_bitmap(win, 0, 80, 0);
+	al_flip_display();
+	al_destroy_bitmap(baner);
+	al_destroy_bitmap(win);
+}
+
+void allegro_display_stats(short bombs_remain, int time)
+{
+	char* bombs_string = malloc(4);
+	snprintf(bombs_string, 4, "%hi", bombs_remain);
+	
+	char* time_string = malloc(6);
+	snprintf(time_string, 6, "%d", time);
+
+	ALLEGRO_FONT* roboto_regular;
+	ALLEGRO_FONT* roboto_bold_italic;
+	roboto_regular = al_load_font("fonts\\Roboto-Regular.ttf", 20, NULL);
+	roboto_bold_italic = al_load_font("fonts\\Roboto-BoldItalic.ttf", 20, NULL);
+
+	al_draw_text(roboto_regular, al_map_rgb(255, 73, 0), 200, 110, ALLEGRO_ALIGN_LEFT, "Bomby: ");
+	al_draw_text(roboto_bold_italic, al_map_rgb(255, 122, 0), 270, 110, ALLEGRO_ALIGN_LEFT, bombs_string);
+	
+	al_draw_text(roboto_regular, al_map_rgb(255, 73, 0), 700, 110, ALLEGRO_ALIGN_LEFT, "Czas: ");
+	al_draw_text(roboto_bold_italic, al_map_rgb(255, 122, 0), 770, 110, ALLEGRO_ALIGN_LEFT, time_string);
+
+	al_destroy_font(roboto_regular);
+	al_destroy_font(roboto_bold_italic);
+}
+
+
+int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y, float mouse_x, float mouse_y, ALLEGRO_EVENT* event, short* bombs_remain, unsigned short* clicks_made)
 {
 	int clicked_x = (mouse_x - margin_x) / 30;
 	int clicked_y = (mouse_y - margin_y) / 30;
@@ -295,19 +332,6 @@ int allegro_field_click(int** tab, int** clicked, unsigned short bombs, unsigned
 	return 0;
 }
 
-void allegro_display_win()
-{
-	al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
-	ALLEGRO_BITMAP* baner;
-	ALLEGRO_BITMAP* win;
-	baner = al_load_bitmap("img\\baner.bmp");
-	win = al_load_bitmap("img\\win.bmp");
-	al_draw_bitmap(baner, 0, 0, 0);
-	al_draw_bitmap(win, 0, 80, 0);
-	al_flip_display();
-	al_destroy_bitmap(baner);
-	al_destroy_bitmap(win);
-}
 
 int main()
 {
@@ -317,6 +341,7 @@ int main()
 	ALLEGRO_DISPLAY* display;
 	ALLEGRO_EVENT_QUEUE* queue;
 	ALLEGRO_TIMER* timer;
+	ALLEGRO_TIMER* game_timer;
 	ALLEGRO_BITMAP* baner;
 
 
@@ -325,10 +350,11 @@ int main()
 	unsigned short margin_x = 0, margin_y = 0;
 	unsigned short clicks_made = 0;
 	int game_state = 0; // 0 - w trakcie, 1 - wygrana, -1 - przegrana
+	int time = 0;
 
 	int** p = NULL; //plansza
 	int** clicked = NULL;
-	unsigned short* bombs_list = NULL; //tablica pozycji bomb
+	unsigned short* bombs_list = NULL;
 	unsigned char x, y;
 	unsigned short bombs;
 	short bombs_remain;
@@ -337,20 +363,25 @@ int main()
 
 	al_init();
 	al_init_image_addon();
+	al_init_font_addon();
+	al_init_ttf_addon();
 	al_install_mouse();
 
 	display = al_create_display(1000,650);
 	queue = al_create_event_queue();
 	timer = al_create_timer(1.0 / 60);
+	game_timer = al_create_timer(1.0);
 	baner = al_load_bitmap("img\\baner.bmp");
 
 
 	al_register_event_source(queue, al_get_display_event_source(display));
 	al_register_event_source(queue, al_get_timer_event_source(timer));
+	al_register_event_source(queue, al_get_timer_event_source(game_timer));
 	al_register_event_source(queue, al_get_mouse_event_source());
 
-
+	al_set_window_title(display, "Gra Saper");
 	al_start_timer(timer);
+
 
 	allegro_display_menu();
 
@@ -395,15 +426,13 @@ int main()
 					wypisz(p, x, y);
 					printf("\n--------------------------------\n\n");
 
-
+					al_start_timer(game_timer);
 					al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
-					al_draw_bitmap(baner, 0, 0, 0);
 				}
 			}
-			else if(mode == 1 || mode == 2 || mode == 3) // PEWNIE ODKRYWANIE PÓL
+			else if(mode == 1 || mode == 2 || mode == 3)
 			{
-				// dodaj kliknięte pole do tablicy klikniętych pól (zmień wartość w komórce o klikniętych koordynatach [tak jak lista bomb / a może i dwuwymiarowo] na inną niż niekliknięte)
-				game_state = allegro_field_click(p, clicked, bombs, x, y, margin_x, margin_y, mouse_x, mouse_y, &event, &bombs_remain, &clicks_made);
+				game_state = handle_field_click(p, clicked, bombs, x, y, margin_x, margin_y, mouse_x, mouse_y, &event, &bombs_remain, &clicks_made);
 				printf("bombs: %hi\n", bombs_remain);
 				
 			}
@@ -414,12 +443,19 @@ int main()
 		{
 			if(mode != 0)
 			{
-				//funkjca rysująca na podstawie tablicy klikniętych i tablicy 'p'
+				al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
+				al_draw_bitmap(baner, 0, 0, 0);
 				allegro_draw_fields(p, clicked, x, y, margin_x, margin_y);
+
+				if(event.timer.source == game_timer && mode != 10)
+					time = event.timer.count;
+				allegro_display_stats(bombs_remain, time);
+
 				if(game_state == 1)
 				{
 					mode = 10;
 					allegro_display_win();
+					
 				}
 				else if (game_state == -1)
 					mode = 10;
@@ -430,11 +466,9 @@ int main()
 	}
 
 
-
-	// Sprzątanie pamięci
-
 	al_destroy_display(display);
 	al_destroy_timer(timer);
+	al_destroy_timer(game_timer);
 	al_destroy_bitmap(baner);
 
 
