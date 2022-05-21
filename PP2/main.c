@@ -282,8 +282,8 @@ void allegro_display_stats(short bombs_remain, int time)
 
 	ALLEGRO_FONT* roboto_regular;
 	ALLEGRO_FONT* roboto_bold_italic;
-	roboto_regular = al_load_font("fonts\\Roboto-Regular.ttf", 20, NULL);
-	roboto_bold_italic = al_load_font("fonts\\Roboto-BoldItalic.ttf", 20, NULL);
+	roboto_regular = al_load_font("fonts\\Roboto-Regular.ttf", 20, 0);
+	roboto_bold_italic = al_load_font("fonts\\Roboto-BoldItalic.ttf", 20, 0);
 
 	al_draw_text(roboto_regular, al_map_rgb(255, 73, 0), 200, 110, ALLEGRO_ALIGN_LEFT, "Bomby: ");
 	al_draw_text(roboto_bold_italic, al_map_rgb(255, 122, 0), 270, 110, ALLEGRO_ALIGN_LEFT, bombs_string);
@@ -295,6 +295,26 @@ void allegro_display_stats(short bombs_remain, int time)
 	al_destroy_font(roboto_bold_italic);
 }
 
+void show_safe(int** tab, int** clicked, unsigned char x, unsigned char y, unsigned short* clicks_made, int clicked_x, int clicked_y)
+{
+	unsigned short x_f_p, y_f_p;
+	short pos_x, pos_y;
+	for (int j = 0; j < 9; j++)
+	{
+		y_f_p = j / 3;
+		x_f_p = j % 3;
+		pos_y = clicked_y + y_f_p - 1;
+		pos_x = clicked_x + x_f_p - 1;
+
+		if ((!(pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1 || clicked[pos_y][pos_x] == 10)) && tab[pos_y][pos_x] != -1)
+		{
+			clicked[pos_y][pos_x] = 10;
+			*clicks_made = *clicks_made + 1;
+			if(tab[pos_y][pos_x] == 0)
+				show_safe(tab, clicked, x, y, clicks_made, pos_x, pos_y);
+		}
+	}
+}
 
 int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y, float mouse_x, float mouse_y, ALLEGRO_EVENT* event, short* bombs_remain, unsigned short* clicks_made)
 {
@@ -312,6 +332,7 @@ int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned 
 							clicked[i][j] = 10;
 					return -1;
 				}
+				if (tab[clicked_y][clicked_x] == 0) show_safe(tab, clicked, x, y, clicks_made, clicked_x, clicked_y);
 				*clicks_made = *clicks_made + 1;
 				if (*clicks_made == (x * y) - bombs) return 1;
 		}
@@ -431,11 +452,7 @@ int main()
 				}
 			}
 			else if(mode == 1 || mode == 2 || mode == 3)
-			{
 				game_state = handle_field_click(p, clicked, bombs, x, y, margin_x, margin_y, mouse_x, mouse_y, &event, &bombs_remain, &clicks_made);
-				printf("bombs: %hi\n", bombs_remain);
-				
-			}
 		}
 
 
@@ -455,7 +472,6 @@ int main()
 				{
 					mode = 10;
 					allegro_display_win();
-					
 				}
 				else if (game_state == -1)
 					mode = 10;
