@@ -306,7 +306,7 @@ void show_safe(int** tab, int** clicked, unsigned char x, unsigned char y, unsig
 		pos_y = clicked_y + y_f_p - 1;
 		pos_x = clicked_x + x_f_p - 1;
 
-		if ((!(pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1 || clicked[pos_y][pos_x] == 10)) && tab[pos_y][pos_x] != -1)
+		if ((!(pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1 || clicked[pos_y][pos_x] == 10 || clicked[pos_y][pos_x] == -2)) && tab[pos_y][pos_x] != -1)
 		{
 			clicked[pos_y][pos_x] = 10;
 			*clicks_made = *clicks_made + 1;
