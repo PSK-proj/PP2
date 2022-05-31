@@ -1,19 +1,3 @@
-/*	TRYBY
-	- 9x9, 10 bomb
-	- 16x16, 40 bomb
-	- 30x16, 99 bomb
-
-	ZASADY
-	- bomba = -1 wartość pola
-	- pole obok co najmniej 1 bomby = ilość bomb wokół
-	- pole bez bomb wokół = 0
-
-	LISTA ODSŁONIĘTYCH
-	- 0 - nieodsłonięte
-	- 10 - odsłonięte
-	- -2 - flaga
-*/
-
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -27,30 +11,6 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_font.h>
-
-void wypisz(int** tab, unsigned char x, unsigned char y)
-{
-	for (int i = 0; i < y; i++)
-	{
-		for (int j = 0; j < x; j++)
-		{
-			if (tab[i][j] == -1) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x40);
-			else if (tab[i][j] == 0) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x00);
-			else if (tab[i][j] == 1) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x09);
-			else if (tab[i][j] == 2) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x02);
-			else if (tab[i][j] == 3) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x0C);
-			else if (tab[i][j] == 4) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x04);
-			else if (tab[i][j] == 5) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x05);
-			else if (tab[i][j] == 6) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x06);
-			else if (tab[i][j] == 7) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x07);
-			else SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x08);
-
-			printf("%2d", tab[i][j]);
-		}
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x07);
-		putchar('\n');
-	}
-}
 
 void bombs_draw(int** tab, unsigned char x, unsigned char y, unsigned short bombs, unsigned short* bombs_list)
 {
@@ -72,7 +32,6 @@ void bombs_draw(int** tab, unsigned char x, unsigned char y, unsigned short bomb
 
 void set_field_numbers(int** tab, unsigned char x, unsigned char y, unsigned short bombs, unsigned short* bombs_list)
 {
-	printf("   KOORDYNATY: \n");
 	unsigned char x_b, y_b;
 	unsigned short x_b_p, y_b_p;
 	short pos_x, pos_y;
@@ -80,7 +39,6 @@ void set_field_numbers(int** tab, unsigned char x, unsigned char y, unsigned sho
 	{
 		y_b = bombs_list[i] / x;
 		x_b = bombs_list[i] % x;
-		printf("\n%3d.bomba: %3hu, y_b: %3hhu, x_b: %3hhu\n", i + 1, bombs_list[i], y_b, x_b);
 
 		for (int j = 0; j < 9; j++)
 		{
@@ -370,10 +328,10 @@ int main()
 	unsigned char mode = 0;
 	unsigned short margin_x = 0, margin_y = 0;
 	unsigned short clicks_made = 0;
-	int game_state = 0; // 0 - w trakcie, 1 - wygrana, -1 - przegrana
+	int game_state = 0;
 	int time = 0;
 
-	int** p = NULL; //plansza
+	int** p = NULL;
 	int** clicked = NULL;
 	unsigned short* bombs_list = NULL;
 	unsigned char x, y;
@@ -407,7 +365,6 @@ int main()
 	allegro_display_menu();
 
 
-	// GRAFICZNE WYŚWIETLANIE
 	while (running == 1)
 	{
 
@@ -423,7 +380,7 @@ int main()
 
 		if (event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
-			if (mode == 0) // WYBIERANIE TRUDNOŚCI
+			if (mode == 0)
 			{
 				if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 200 && mouse_y <= 280) mode = 1;
 				else if(mouse_x >= 370 && mouse_x <= 630 && mouse_y >= 300 && mouse_y <= 380) mode = 2;
@@ -441,11 +398,8 @@ int main()
 					clear_board(clicked, x, y);
 
 					bombs_draw(p, x, y, bombs, bombs_list);
-					set_field_numbers(p, x, y, bombs, bombs_list); //Tu są także wypisywanie koordynaty bomb
+					set_field_numbers(p, x, y, bombs, bombs_list);
 					bombs_remain = bombs;
-					printf("\n\n--------------------------------\n\n");
-					wypisz(p, x, y);
-					printf("\n--------------------------------\n\n");
 
 					al_start_timer(game_timer);
 					al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
