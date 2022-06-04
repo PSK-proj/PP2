@@ -1,0 +1,28 @@
+var struct_p_s___private_rec__ =
+[
+    [ "blue_fuzz", "struct_p_s___private_rec__.html#af482a8cb33faaef90a97b921b46ee596", null ],
+    [ "blue_scale", "struct_p_s___private_rec__.html#a196876ff42d1d4819a5872a451c7385a", null ],
+    [ "blue_shift", "struct_p_s___private_rec__.html#a1b8f5297c719e154de69333a0ddfa418", null ],
+    [ "blue_values", "struct_p_s___private_rec__.html#ad478c1ba8f5baf1846b8311e08b0d03f", null ],
+    [ "expansion_factor", "struct_p_s___private_rec__.html#a442bbebb280fdf45c18905736cc6577d", null ],
+    [ "family_blues", "struct_p_s___private_rec__.html#a2017169e5fe3eaf03383fa89b35ed569", null ],
+    [ "family_other_blues", "struct_p_s___private_rec__.html#a11ffcd514898ab83f8289a5b30dd42b0", null ],
+    [ "force_bold", "struct_p_s___private_rec__.html#a7b4980548cc56b38728417df50e11333", null ],
+    [ "language_group", "struct_p_s___private_rec__.html#adbfdcd1d9da2934053185bafe51903f7", null ],
+    [ "lenIV", "struct_p_s___private_rec__.html#ab90cd7267e1c0d1ca599cc3763c18cbd", null ],
+    [ "min_feature", "struct_p_s___private_rec__.html#a237fea97961a4bad3a38fb951f4a5599", null ],
+    [ "num_blue_values", "struct_p_s___private_rec__.html#a62b4c7eed73efe086fc783d2d89720c6", null ],
+    [ "num_family_blues", "struct_p_s___private_rec__.html#a5460e320929317125e4fd134dde36883", null ],
+    [ "num_family_other_blues", "struct_p_s___private_rec__.html#ab493f281de660904e4caa44ce6abf039", null ],
+    [ "num_other_blues", "struct_p_s___private_rec__.html#aa71908b2c4509fedde5033bfb84e29e0", null ],
+    [ "num_snap_heights", "struct_p_s___private_rec__.html#a117779a71a8db3dc09604ec06b72de43", null ],
+    [ "num_snap_widths", "struct_p_s___private_rec__.html#a9bc684439447e8b551e9967f0c501e44", null ],
+    [ "other_blues", "struct_p_s___private_rec__.html#a01efc5f5aee42c3b5c7336977d557b9b", null ],
+    [ "password", "struct_p_s___private_rec__.html#a78c3ce9881a1a54e3b472117b955275c", null ],
+    [ "round_stem_up", "struct_p_s___private_rec__.html#a6c9769398350f88f7ea5f8c51bfb887d", null ],
+    [ "snap_heights", "struct_p_s___private_rec__.html#a7eecc9e7d8d913e742ff7c6da9875079", null ],
+    [ "snap_widths", "struct_p_s___private_rec__.html#a76cc14bd642754de576989c6cf98ca09", null ],
+    [ "standard_height", "struct_p_s___private_rec__.html#a0bf3096631be0615ea442d7559125ba1", null ],
+    [ "standard_width", "struct_p_s___private_rec__.html#aaf4114859b1620af132467e17ced6076", null ],
+    [ "unique_id", "struct_p_s___private_rec__.html#a30844aac1dfa21e60ef54f1086968a56", null ]
+];

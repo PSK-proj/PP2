@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja struktury th_huff_code</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structth__huff__code.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Pola danych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja struktury th_huff_code</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A Huffman code for a Theora DCT token.  
+ <a href="structth__huff__code.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="theora_2codec_8h_source.html">codec.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Pola danych</h2></td></tr>
+<tr class="memitem:ac2b8a95b66c2e86fb74cc13a2be69950"><td class="memItemLeft" align="right" valign="top">ogg_uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structth__huff__code.html#ac2b8a95b66c2e86fb74cc13a2be69950">pattern</a></td></tr>
+<tr class="memdesc:ac2b8a95b66c2e86fb74cc13a2be69950"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bit pattern for the code, with the LSbit of the pattern aligned in the LSbit of the word.  <a href="#ac2b8a95b66c2e86fb74cc13a2be69950">Więcej...</a><br /></td></tr>
+<tr class="separator:ac2b8a95b66c2e86fb74cc13a2be69950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d83ff0550ba7e88421248b2fa1e80df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structth__huff__code.html#a3d83ff0550ba7e88421248b2fa1e80df">nbits</a></td></tr>
+<tr class="memdesc:a3d83ff0550ba7e88421248b2fa1e80df"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of bits in the code.  <a href="#a3d83ff0550ba7e88421248b2fa1e80df">Więcej...</a><br /></td></tr>
+<tr class="separator:a3d83ff0550ba7e88421248b2fa1e80df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>A Huffman code for a Theora DCT token. </p>
+<p>Each set of Huffman codes in a given table must form a complete, prefix-free code. There is no requirement that all the tokens in a table have a valid code, but the current encoder is not optimized to take advantage of this. If each of the five grouops of 16 tables does not contain at least one table with a code for every token, then the encoder may fail to encode certain frames. The complete table in the first group of 16 does not have to be in the same place as the complete table in the other groups, but the complete tables in the remaining four groups must all be in the same place. </p>
+</div><h2 class="groupheader">Dokumentacja pól</h2>
+<a id="a3d83ff0550ba7e88421248b2fa1e80df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d83ff0550ba7e88421248b2fa1e80df">&#9670;&nbsp;</a></span>nbits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nbits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of bits in the code. </p>
+<p>This must be between 0 and 32, inclusive. </p>
+
+</div>
+</div>
+<a id="ac2b8a95b66c2e86fb74cc13a2be69950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b8a95b66c2e86fb74cc13a2be69950">&#9670;&nbsp;</a></span>pattern</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ogg_uint32_t pattern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The bit pattern for the code, with the LSbit of the pattern aligned in the LSbit of the word. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structth__huff__code.html">th_huff_code</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

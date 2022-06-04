@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja struktury OpusHead</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_opus_head.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Pola danych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja struktury OpusHead<div class="ingroups"><a class="el" href="group__header__info.html">Header Information</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ogg Opus bitstream information.  
+ <a href="struct_opus_head.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opusfile_8h_source.html">opusfile.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Pola danych</h2></td></tr>
+<tr class="memitem:aad880fc4455c253781e8968f2239d56f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#aad880fc4455c253781e8968f2239d56f">version</a></td></tr>
+<tr class="memdesc:aad880fc4455c253781e8968f2239d56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Ogg Opus format version, in the range 0...255.  <a href="#aad880fc4455c253781e8968f2239d56f">Więcej...</a><br /></td></tr>
+<tr class="separator:aad880fc4455c253781e8968f2239d56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d7ea6e330c0d1775397c867d1252f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#a96d7ea6e330c0d1775397c867d1252f8">channel_count</a></td></tr>
+<tr class="memdesc:a96d7ea6e330c0d1775397c867d1252f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of channels, in the range 1...255.  <a href="#a96d7ea6e330c0d1775397c867d1252f8">Więcej...</a><br /></td></tr>
+<tr class="separator:a96d7ea6e330c0d1775397c867d1252f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e8b72dbfdffe81ae5457fefea6c95a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#ac1e8b72dbfdffe81ae5457fefea6c95a">pre_skip</a></td></tr>
+<tr class="memdesc:ac1e8b72dbfdffe81ae5457fefea6c95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of samples that should be discarded from the beginning of the stream.  <a href="#ac1e8b72dbfdffe81ae5457fefea6c95a">Więcej...</a><br /></td></tr>
+<tr class="separator:ac1e8b72dbfdffe81ae5457fefea6c95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac502c5223a3db3c7e75e2a502c1513d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="opus__types_8h.html#a643eaaadb9ef6cd44308e0299d8cd8ce">opus_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#ac502c5223a3db3c7e75e2a502c1513d2">input_sample_rate</a></td></tr>
+<tr class="memdesc:ac502c5223a3db3c7e75e2a502c1513d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sampling rate of the original input.  <a href="#ac502c5223a3db3c7e75e2a502c1513d2">Więcej...</a><br /></td></tr>
+<tr class="separator:ac502c5223a3db3c7e75e2a502c1513d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82fc30012acee28c971a6f7047410b8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#a82fc30012acee28c971a6f7047410b8c">output_gain</a></td></tr>
+<tr class="memdesc:a82fc30012acee28c971a6f7047410b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gain to apply to the decoded output, in dB, as a Q8 value in the range -32768...32767.  <a href="#a82fc30012acee28c971a6f7047410b8c">Więcej...</a><br /></td></tr>
+<tr class="separator:a82fc30012acee28c971a6f7047410b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd959cef8b597992db63c9d2cb14ad2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#a4cd959cef8b597992db63c9d2cb14ad2">mapping_family</a></td></tr>
+<tr class="memdesc:a4cd959cef8b597992db63c9d2cb14ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The channel mapping family, in the range 0...255.  <a href="#a4cd959cef8b597992db63c9d2cb14ad2">Więcej...</a><br /></td></tr>
+<tr class="separator:a4cd959cef8b597992db63c9d2cb14ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab344671ebe750d85a19ff1115ee2401a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#ab344671ebe750d85a19ff1115ee2401a">stream_count</a></td></tr>
+<tr class="memdesc:ab344671ebe750d85a19ff1115ee2401a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of Opus streams in each Ogg packet, in the range 1...255.  <a href="#ab344671ebe750d85a19ff1115ee2401a">Więcej...</a><br /></td></tr>
+<tr class="separator:ab344671ebe750d85a19ff1115ee2401a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682bc1814b45570e2c4ce3100b3862fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#a682bc1814b45570e2c4ce3100b3862fb">coupled_count</a></td></tr>
+<tr class="memdesc:a682bc1814b45570e2c4ce3100b3862fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of coupled Opus streams in each Ogg packet, in the range 0...127.  <a href="#a682bc1814b45570e2c4ce3100b3862fb">Więcej...</a><br /></td></tr>
+<tr class="separator:a682bc1814b45570e2c4ce3100b3862fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456bddc3af4b0f3405539f92725c7e19"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_opus_head.html#a456bddc3af4b0f3405539f92725c7e19">mapping</a> [<a class="el" href="group__header__info.html#gad6f0329582430a828244045ac85a5417">OPUS_CHANNEL_COUNT_MAX</a>]</td></tr>
+<tr class="memdesc:a456bddc3af4b0f3405539f92725c7e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mapping from coded stream channels to output channels.  <a href="#a456bddc3af4b0f3405539f92725c7e19">Więcej...</a><br /></td></tr>
+<tr class="separator:a456bddc3af4b0f3405539f92725c7e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Ogg Opus bitstream information. </p>
+<p>This contains the basic playback parameters for a stream, and corresponds to the initial ID header packet of an Ogg Opus stream. </p>
+</div><h2 class="groupheader">Dokumentacja pól</h2>
+<a id="a96d7ea6e330c0d1775397c867d1252f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d7ea6e330c0d1775397c867d1252f8">&#9670;&nbsp;</a></span>channel_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int channel_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of channels, in the range 1...255. </p>
+
+</div>
+</div>
+<a id="a682bc1814b45570e2c4ce3100b3862fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682bc1814b45570e2c4ce3100b3862fb">&#9670;&nbsp;</a></span>coupled_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int coupled_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of coupled Opus streams in each Ogg packet, in the range 0...127. </p>
+<p>This must satisfy <code>0 &lt;= coupled_count &lt;= stream_count</code> and <code>coupled_count + stream_count &lt;= 255</code>. The coupled streams appear first, before all uncoupled streams, in an Ogg Opus packet. </p>
+
+</div>
+</div>
+<a id="ac502c5223a3db3c7e75e2a502c1513d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac502c5223a3db3c7e75e2a502c1513d2">&#9670;&nbsp;</a></span>input_sample_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="opus__types_8h.html#a643eaaadb9ef6cd44308e0299d8cd8ce">opus_uint32</a> input_sample_rate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The sampling rate of the original input. </p>
+<p>All Opus audio is coded at 48 kHz, and should also be decoded at 48 kHz for playback (unless the target hardware does not support this sampling rate). However, this field may be used to resample the audio back to the original sampling rate, for example, when saving the output to a file. </p>
+
+</div>
+</div>
+<a id="a456bddc3af4b0f3405539f92725c7e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456bddc3af4b0f3405539f92725c7e19">&#9670;&nbsp;</a></span>mapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char mapping[<a class="el" href="group__header__info.html#gad6f0329582430a828244045ac85a5417">OPUS_CHANNEL_COUNT_MAX</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mapping from coded stream channels to output channels. </p>
+<p>Let <code>index=mapping[k]</code> be the value for channel <code>k</code>. If <code>index&lt;2*coupled_count</code>, then it refers to the left channel from stream <code>(index/2)</code> if even, and the right channel from stream <code>(index/2)</code> if odd. Otherwise, it refers to the output of the uncoupled stream <code>(index-coupled_count)</code>. </p>
+
+</div>
+</div>
+<a id="a4cd959cef8b597992db63c9d2cb14ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd959cef8b597992db63c9d2cb14ad2">&#9670;&nbsp;</a></span>mapping_family</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mapping_family</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The channel mapping family, in the range 0...255. </p>
+<p>Channel mapping family 0 covers mono or stereo in a single stream. Channel mapping family 1 covers 1 to 8 channels in one or more streams, using the Vorbis speaker assignments. Channel mapping family 255 covers 1 to 255 channels in one or more streams, but without any defined speaker assignment. </p>
+
+</div>
+</div>
+<a id="a82fc30012acee28c971a6f7047410b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82fc30012acee28c971a6f7047410b8c">&#9670;&nbsp;</a></span>output_gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int output_gain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The gain to apply to the decoded output, in dB, as a Q8 value in the range -32768...32767. </p>
+<p>The <code>libopusfile</code> API will automatically apply this gain to the decoded output before returning it, scaling it by <code>pow(10,output_gain/(20.0*256))</code>. You can adjust this behavior with <a class="el" href="group__stream__decoding.html#ga7df927613ccf57996319678e08513289" title="Sets the gain to be used for decoded output.">op_set_gain_offset()</a>. </p>
+
+</div>
+</div>
+<a id="ac1e8b72dbfdffe81ae5457fefea6c95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e8b72dbfdffe81ae5457fefea6c95a">&#9670;&nbsp;</a></span>pre_skip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned pre_skip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of samples that should be discarded from the beginning of the stream. </p>
+
+</div>
+</div>
+<a id="ab344671ebe750d85a19ff1115ee2401a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab344671ebe750d85a19ff1115ee2401a">&#9670;&nbsp;</a></span>stream_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stream_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of Opus streams in each Ogg packet, in the range 1...255. </p>
+
+</div>
+</div>
+<a id="aad880fc4455c253781e8968f2239d56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad880fc4455c253781e8968f2239d56f">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Ogg Opus format version, in the range 0...255. </p>
+<p>The top 4 bits represent a "major" version, and the bottom four bits represent backwards-compatible "minor" revisions. The current specification describes version 1. This library will recognize versions up through 15 as backwards compatible with the current specification. An earlier draft of the specification described a version 0, but the only difference between version 1 and version 0 is that version 0 did not specify the semantics for handling the version field. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_opus_head.html">OpusHead</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

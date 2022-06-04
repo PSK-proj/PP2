@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja struktury PHYSFS_Allocator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_p_h_y_s_f_s___allocator.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Pola danych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja struktury PHYSFS_Allocator</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>PhysicsFS allocation function pointers.  
+ <a href="struct_p_h_y_s_f_s___allocator.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="physfs_8h_source.html">physfs.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Pola danych</h2></td></tr>
+<tr class="memitem:aaa03fcc8faf7a48938a66149075c084c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___allocator.html#aaa03fcc8faf7a48938a66149075c084c">Init</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>)</td></tr>
+<tr class="memdesc:aaa03fcc8faf7a48938a66149075c084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize.  <a href="#aaa03fcc8faf7a48938a66149075c084c">Więcej...</a><br /></td></tr>
+<tr class="separator:aaa03fcc8faf7a48938a66149075c084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe04c0cb162990bd8ddcfb030372e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___allocator.html#a0fe04c0cb162990bd8ddcfb030372e9d">Deinit</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>)</td></tr>
+<tr class="memdesc:a0fe04c0cb162990bd8ddcfb030372e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize your allocator.  <a href="#a0fe04c0cb162990bd8ddcfb030372e9d">Więcej...</a><br /></td></tr>
+<tr class="separator:a0fe04c0cb162990bd8ddcfb030372e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56324de6391223a3f15d77dfd45d5434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___allocator.html#a56324de6391223a3f15d77dfd45d5434">Malloc</a> )(<a class="el" href="physfs_8h.html#a632ba02500231e5f6f6df2e4cb71c818">PHYSFS_uint64</a>)</td></tr>
+<tr class="memdesc:a56324de6391223a3f15d77dfd45d5434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate like malloc().  <a href="#a56324de6391223a3f15d77dfd45d5434">Więcej...</a><br /></td></tr>
+<tr class="separator:a56324de6391223a3f15d77dfd45d5434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104b5ff2f167bfab0b4f3bb569abde52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___allocator.html#a104b5ff2f167bfab0b4f3bb569abde52">Realloc</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *, <a class="el" href="physfs_8h.html#a632ba02500231e5f6f6df2e4cb71c818">PHYSFS_uint64</a>)</td></tr>
+<tr class="memdesc:a104b5ff2f167bfab0b4f3bb569abde52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate like realloc().  <a href="#a104b5ff2f167bfab0b4f3bb569abde52">Więcej...</a><br /></td></tr>
+<tr class="separator:a104b5ff2f167bfab0b4f3bb569abde52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8dcafa8ec839706bd4b300c97e1a98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___allocator.html#adb8dcafa8ec839706bd4b300c97e1a98">Free</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *)</td></tr>
+<tr class="memdesc:adb8dcafa8ec839706bd4b300c97e1a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory from Malloc or Realloc.  <a href="#adb8dcafa8ec839706bd4b300c97e1a98">Więcej...</a><br /></td></tr>
+<tr class="separator:adb8dcafa8ec839706bd4b300c97e1a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>PhysicsFS allocation function pointers. </p>
+<p>(This is for limited, hardcore use. If you don't immediately see a need for it, you can probably ignore this forever.)</p>
+<p>You create one of these structures for use with PHYSFS_setAllocator. Allocators are assumed to be reentrant by the caller; please mutex accordingly.</p>
+<p>Allocations are always discussed in 64-bits, for future expansion...we're on the cusp of a 64-bit transition, and we'll probably be allocating 6 gigabytes like it's nothing sooner or later, and I don't want to change this again at that point. If you're on a 32-bit platform and have to downcast, it's okay to return NULL if the allocation is greater than 4 gigabytes, since you'd have to do so anyhow.</p>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="physfs_8h.html#ae6297d1ae7755b9236b01950bfbb0ef1" title="Hook your own allocation routines into PhysicsFS.">PHYSFS_setAllocator</a> </dd></dl>
+</div><h2 class="groupheader">Dokumentacja pól</h2>
+<a id="a0fe04c0cb162990bd8ddcfb030372e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe04c0cb162990bd8ddcfb030372e9d">&#9670;&nbsp;</a></span>Deinit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(* Deinit) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deinitialize your allocator. </p>
+<p>Can be NULL. </p>
+
+</div>
+</div>
+<a id="adb8dcafa8ec839706bd4b300c97e1a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8dcafa8ec839706bd4b300c97e1a98">&#9670;&nbsp;</a></span>Free</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(* Free) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free memory from Malloc or Realloc. </p>
+
+</div>
+</div>
+<a id="aaa03fcc8faf7a48938a66149075c084c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa03fcc8faf7a48938a66149075c084c">&#9670;&nbsp;</a></span>Init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* Init) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize. </p>
+<p>Can be NULL. Zero on failure. </p>
+
+</div>
+</div>
+<a id="a56324de6391223a3f15d77dfd45d5434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56324de6391223a3f15d77dfd45d5434">&#9670;&nbsp;</a></span>Malloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>*(* Malloc) (<a class="el" href="physfs_8h.html#a632ba02500231e5f6f6df2e4cb71c818">PHYSFS_uint64</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate like malloc(). </p>
+
+</div>
+</div>
+<a id="a104b5ff2f167bfab0b4f3bb569abde52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104b5ff2f167bfab0b4f3bb569abde52">&#9670;&nbsp;</a></span>Realloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>*(* Realloc) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *, <a class="el" href="physfs_8h.html#a632ba02500231e5f6f6df2e4cb71c818">PHYSFS_uint64</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reallocate like realloc(). </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_p_h_y_s_f_s___allocator.html">PHYSFS_Allocator</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

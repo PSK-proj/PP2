@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja struktury PHYSFS_Archiver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_p_h_y_s_f_s___archiver.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Pola danych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja struktury PHYSFS_Archiver</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract interface to provide support for user-defined archives.  
+ <a href="struct_p_h_y_s_f_s___archiver.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="physfs_8h_source.html">physfs.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Pola danych</h2></td></tr>
+<tr class="memitem:a8a4760b3b9f4481e3f79ac1e4160fbd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="physfs_8h.html#aae011b45ebd619edb193fe196e1f5f74">PHYSFS_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a8a4760b3b9f4481e3f79ac1e4160fbd1">version</a></td></tr>
+<tr class="memdesc:a8a4760b3b9f4481e3f79ac1e4160fbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary compatibility information.  <a href="#a8a4760b3b9f4481e3f79ac1e4160fbd1">Więcej...</a><br /></td></tr>
+<tr class="separator:a8a4760b3b9f4481e3f79ac1e4160fbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d47bbcea2435e5daecf81ebed3a73e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_h_y_s_f_s___archive_info.html">PHYSFS_ArchiveInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a3d47bbcea2435e5daecf81ebed3a73e6">info</a></td></tr>
+<tr class="memdesc:a3d47bbcea2435e5daecf81ebed3a73e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic info about this archiver.  <a href="#a3d47bbcea2435e5daecf81ebed3a73e6">Więcej...</a><br /></td></tr>
+<tr class="separator:a3d47bbcea2435e5daecf81ebed3a73e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5499df34bbb561fd420f87430d63ddb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a5499df34bbb561fd420f87430d63ddb1">openArchive</a> )(<a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a> *io, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name, int forWrite, int *claimed)</td></tr>
+<tr class="memdesc:a5499df34bbb561fd420f87430d63ddb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open an archive provided by (io).  <a href="#a5499df34bbb561fd420f87430d63ddb1">Więcej...</a><br /></td></tr>
+<tr class="separator:a5499df34bbb561fd420f87430d63ddb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe37539b7d3bc2d9931bd1713cedacb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="physfs_8h.html#aa11a2522c5f699b00d19802b721e73d4">PHYSFS_EnumerateCallbackResult</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#afe37539b7d3bc2d9931bd1713cedacb5">enumerate</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *dirname, <a class="el" href="physfs_8h.html#a1e72dbc92c0decdca218c8a9a658e788">PHYSFS_EnumerateCallback</a> cb, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *origdir, <a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *callbackdata)</td></tr>
+<tr class="memdesc:afe37539b7d3bc2d9931bd1713cedacb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all files in (dirname).  <a href="#afe37539b7d3bc2d9931bd1713cedacb5">Więcej...</a><br /></td></tr>
+<tr class="separator:afe37539b7d3bc2d9931bd1713cedacb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d363cbdd7fc28b477bcec9558de02d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a0d363cbdd7fc28b477bcec9558de02d5">openRead</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *fnm)</td></tr>
+<tr class="memdesc:a0d363cbdd7fc28b477bcec9558de02d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file in this archive for reading.  <a href="#a0d363cbdd7fc28b477bcec9558de02d5">Więcej...</a><br /></td></tr>
+<tr class="separator:a0d363cbdd7fc28b477bcec9558de02d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbab15a33c9a194cbe33c1f90c379e06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#abbab15a33c9a194cbe33c1f90c379e06">openWrite</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td></tr>
+<tr class="memdesc:abbab15a33c9a194cbe33c1f90c379e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file in this archive for writing.  <a href="#abbab15a33c9a194cbe33c1f90c379e06">Więcej...</a><br /></td></tr>
+<tr class="separator:abbab15a33c9a194cbe33c1f90c379e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21d888e4df279c315c6fb15f4c23540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#ac21d888e4df279c315c6fb15f4c23540">openAppend</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td></tr>
+<tr class="memdesc:ac21d888e4df279c315c6fb15f4c23540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file in this archive for appending.  <a href="#ac21d888e4df279c315c6fb15f4c23540">Więcej...</a><br /></td></tr>
+<tr class="separator:ac21d888e4df279c315c6fb15f4c23540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff79c45931d7802fb62512e5654afb5"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#aaff79c45931d7802fb62512e5654afb5">remove</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td></tr>
+<tr class="memdesc:aaff79c45931d7802fb62512e5654afb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a file or directory in the archive.  <a href="#aaff79c45931d7802fb62512e5654afb5">Więcej...</a><br /></td></tr>
+<tr class="separator:aaff79c45931d7802fb62512e5654afb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcbab20204705859a464358aee5f904"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a7bcbab20204705859a464358aee5f904">mkdir</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td></tr>
+<tr class="memdesc:a7bcbab20204705859a464358aee5f904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory in the archive.  <a href="#a7bcbab20204705859a464358aee5f904">Więcej...</a><br /></td></tr>
+<tr class="separator:a7bcbab20204705859a464358aee5f904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7733d3fb2db064c34bc6cb4b8cd81b0"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#ac7733d3fb2db064c34bc6cb4b8cd81b0">stat</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *fn, <a class="el" href="struct_p_h_y_s_f_s___stat.html">PHYSFS_Stat</a> *stat)</td></tr>
+<tr class="memdesc:ac7733d3fb2db064c34bc6cb4b8cd81b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain basic file metadata.  <a href="#ac7733d3fb2db064c34bc6cb4b8cd81b0">Więcej...</a><br /></td></tr>
+<tr class="separator:ac7733d3fb2db064c34bc6cb4b8cd81b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b594913dda04e5b14ca5d1cdfef97e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_h_y_s_f_s___archiver.html#a0b594913dda04e5b14ca5d1cdfef97e9">closeArchive</a> )(<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque)</td></tr>
+<tr class="memdesc:a0b594913dda04e5b14ca5d1cdfef97e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct a previously-opened archive.  <a href="#a0b594913dda04e5b14ca5d1cdfef97e9">Więcej...</a><br /></td></tr>
+<tr class="separator:a0b594913dda04e5b14ca5d1cdfef97e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Abstract interface to provide support for user-defined archives. </p>
+<dl class="section warning"><dt>Ostrzeżenie</dt><dd>This is advanced, hardcore stuff. You don't need this unless you really know what you're doing. Most apps will not need this.</dd></dl>
+<p>Historically, PhysicsFS provided a means to mount various archive file formats, and physical directories in the native filesystem. However, applications have been limited to the file formats provided by the library. This interface allows an application to provide their own archive file types.</p>
+<p>Conceptually, a <a class="el" href="struct_p_h_y_s_f_s___archiver.html" title="Abstract interface to provide support for user-defined archives.">PHYSFS_Archiver</a> provides directory entries, while <a class="el" href="struct_p_h_y_s_f_s___io.html" title="An abstract i/o interface.">PHYSFS_Io</a> provides data streams for those directory entries. The most obvious use of <a class="el" href="struct_p_h_y_s_f_s___archiver.html" title="Abstract interface to provide support for user-defined archives.">PHYSFS_Archiver</a> is to provide support for an archive file type that isn't provided by PhysicsFS directly: perhaps some proprietary format that only your application needs to understand.</p>
+<p>Internally, all the built-in archive support uses this interface, so the best examples for building a <a class="el" href="struct_p_h_y_s_f_s___archiver.html" title="Abstract interface to provide support for user-defined archives.">PHYSFS_Archiver</a> is the source code to PhysicsFS itself.</p>
+<p>An archiver is added to the system with <a class="el" href="physfs_8h.html#ace0ecda857dc622e2d005af02972237d" title="Add a new archiver to the system.">PHYSFS_registerArchiver()</a>, and then it will be available for use automatically with <a class="el" href="physfs_8h.html#a8eb320e9af03dcdb4c05bbff3ea604d4" title="Add an archive or directory to the search path.">PHYSFS_mount()</a>; if a given archive can be handled with your archiver, it will be given control as appropriate.</p>
+<p>These methods deal with dir handles. You have one instance of your archiver, and it generates a unique, opaque handle for each opened archive in its <a class="el" href="struct_p_h_y_s_f_s___archiver.html#a5499df34bbb561fd420f87430d63ddb1" title="Open an archive provided by (io).">openArchive()</a> method. Since the lifetime of an Archiver (not an archive) is generally the entire lifetime of the process, and it's assumed to be a singleton, we do not provide any instance data for the archiver itself; the app can just use some static variables if necessary.</p>
+<p>Symlinks should always be followed (except in <a class="el" href="struct_p_h_y_s_f_s___archiver.html#ac7733d3fb2db064c34bc6cb4b8cd81b0" title="Obtain basic file metadata.">stat()</a>); PhysicsFS will use the <a class="el" href="struct_p_h_y_s_f_s___archiver.html#ac7733d3fb2db064c34bc6cb4b8cd81b0" title="Obtain basic file metadata.">stat()</a> method to check for symlinks and make a judgement on whether to continue to call other methods based on that.</p>
+<p>Archivers, when necessary, should set the PhysicsFS error state with <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a> before returning. PhysicsFS will pass these errors back to the application unmolested in most cases.</p>
+<p>Thread safety: <a class="el" href="struct_p_h_y_s_f_s___archiver.html" title="Abstract interface to provide support for user-defined archives.">PHYSFS_Archiver</a> implementations are not guaranteed to be thread safe in themselves. PhysicsFS provides thread safety when it calls into a given archiver inside the library, but it does not promise that using the same <a class="el" href="struct_p_h_y_s_f_s___file.html" title="A PhysicsFS file handle.">PHYSFS_File</a> from two threads at once is thread-safe; as such, your <a class="el" href="struct_p_h_y_s_f_s___archiver.html" title="Abstract interface to provide support for user-defined archives.">PHYSFS_Archiver</a> can assume that locking is handled for you so long as the <a class="el" href="struct_p_h_y_s_f_s___io.html" title="An abstract i/o interface.">PHYSFS_Io</a> you return from PHYSFS_open* doesn't change any of your Archiver state, as the <a class="el" href="struct_p_h_y_s_f_s___io.html" title="An abstract i/o interface.">PHYSFS_Io</a> won't be as aggressively protected.</p>
+<dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="physfs_8h.html#ace0ecda857dc622e2d005af02972237d" title="Add a new archiver to the system.">PHYSFS_registerArchiver</a> </dd>
+<dd>
+<a class="el" href="physfs_8h.html#abbc7cce9112c5ddc2f3a9ad5d0edf6e0" title="Remove an archiver from the system.">PHYSFS_deregisterArchiver</a> </dd>
+<dd>
+<a class="el" href="physfs_8h.html#a4ca65fbaa485d68113912bbbd70bd19e" title="Get a list of supported archive types.">PHYSFS_supportedArchiveTypes</a> </dd></dl>
+</div><h2 class="groupheader">Dokumentacja pól</h2>
+<a id="a0b594913dda04e5b14ca5d1cdfef97e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b594913dda04e5b14ca5d1cdfef97e9">&#9670;&nbsp;</a></span>closeArchive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>(* closeArchive) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruct a previously-opened archive. </p>
+<p>Close this archive, and free any associated memory, including the original <a class="el" href="struct_p_h_y_s_f_s___io.html" title="An abstract i/o interface.">PHYSFS_Io</a> and (opaque) itself, if applicable. Implementation can assume that it won't be called if there are still files open from this archive. </p>
+
+</div>
+</div>
+<a id="afe37539b7d3bc2d9931bd1713cedacb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe37539b7d3bc2d9931bd1713cedacb5">&#9670;&nbsp;</a></span>enumerate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="physfs_8h.html#aa11a2522c5f699b00d19802b721e73d4">PHYSFS_EnumerateCallbackResult</a>(* enumerate) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *dirname, <a class="el" href="physfs_8h.html#a1e72dbc92c0decdca218c8a9a658e788">PHYSFS_EnumerateCallback</a> cb, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *origdir, <a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *callbackdata)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List all files in (dirname). </p>
+<p>Each file is passed to (cb), where a copy is made if appropriate, so you can dispose of it upon return from the callback. (dirname) is in platform-independent notation. If you have a failure, call PHYSFS_SetErrorCode() with whatever code seem appropriate and return PHYSFS_ENUM_ERROR. If the callback returns PHYSFS_ENUM_ERROR, please call PHYSFS_SetErrorCode(PHYSFS_ERR_APP_CALLBACK) and then return PHYSFS_ENUM_ERROR as well. Don't call the callback again in any circumstances. If the callback returns PHYSFS_ENUM_STOP, stop enumerating and return PHYSFS_ENUM_STOP as well. Don't call the callback again in any circumstances. Don't set an error code in this case. Callbacks are only supposed to return a value from PHYSFS_EnumerateCallbackResult. Any other result has undefined behavior. As long as the callback returned PHYSFS_ENUM_OK and you haven't experienced any errors of your own, keep enumerating until you're done and then return PHYSFS_ENUM_OK without setting an error code.</p>
+<dl class="section warning"><dt>Ostrzeżenie</dt><dd>PHYSFS_enumerate returns zero or non-zero (success or failure), so be aware this function pointer returns different values! </dd></dl>
+
+</div>
+</div>
+<a id="a3d47bbcea2435e5daecf81ebed3a73e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d47bbcea2435e5daecf81ebed3a73e6">&#9670;&nbsp;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_h_y_s_f_s___archive_info.html">PHYSFS_ArchiveInfo</a> info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Basic info about this archiver. </p>
+<p>This is used to identify your archive, and is returned in <a class="el" href="physfs_8h.html#a4ca65fbaa485d68113912bbbd70bd19e" title="Get a list of supported archive types.">PHYSFS_supportedArchiveTypes()</a>. </p>
+
+</div>
+</div>
+<a id="a7bcbab20204705859a464358aee5f904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bcbab20204705859a464358aee5f904">&#9670;&nbsp;</a></span>mkdir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* mkdir) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a directory in the archive. </p>
+<p>If the application is trying to make multiple dirs, PhysicsFS will split them up into multiple calls before passing them to your driver. If the archive is read-only, this operation should fail. Return non-zero on success, zero on failure. This filename is in platform-independent notation. On failure, call <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. </p>
+
+</div>
+</div>
+<a id="ac21d888e4df279c315c6fb15f4c23540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21d888e4df279c315c6fb15f4c23540">&#9670;&nbsp;</a></span>openAppend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a>*(* openAppend) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a file in this archive for appending. </p>
+<p>If the file does not exist, it should be created. The writing offset should be the end of the file. If the archive is read-only, this operation should fail. This filename is in platform-independent notation. Returns NULL on failure, and calls <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. Returns non-NULL on success. The pointer returned will be passed as the "opaque" parameter for later file calls. </p>
+
+</div>
+</div>
+<a id="a5499df34bbb561fd420f87430d63ddb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5499df34bbb561fd420f87430d63ddb1">&#9670;&nbsp;</a></span>openArchive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a>*(* openArchive) (<a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a> *io, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name, int forWrite, int *claimed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open an archive provided by (io). </p>
+<p>This is where resources are allocated and data is parsed when mounting an archive. (name) is a filename associated with (io), but doesn't necessarily map to anything, let alone a real filename. This possibly- meaningless name is in platform-dependent notation. (forWrite) is non-zero if this is to be used for the write directory, and zero if this is to be used for an element of the search path. (claimed) should be set to 1 if this is definitely an archive your archiver implementation can handle, even if it fails. We use to decide if we should stop trying other archivers if you fail to open it. For example: the .zip archiver will set this to 1 for something that's got a .zip file signature, even if it failed because the file was also truncated. No sense in trying other archivers here, we already tried to handle it with the appropriate implementation!. Return NULL on failure and set (claimed) appropriately. If no archiver opened the archive or set (claimed), <a class="el" href="physfs_8h.html#a8eb320e9af03dcdb4c05bbff3ea604d4" title="Add an archive or directory to the search path.">PHYSFS_mount()</a> will report PHYSFS_ERR_UNSUPPORTED. Otherwise, it will report the error from the archiver that claimed the data through (claimed). Return non-NULL on success. The pointer returned will be passed as the "opaque" parameter for later calls. </p>
+
+</div>
+</div>
+<a id="a0d363cbdd7fc28b477bcec9558de02d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d363cbdd7fc28b477bcec9558de02d5">&#9670;&nbsp;</a></span>openRead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a>*(* openRead) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *fnm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a file in this archive for reading. </p>
+<p>This filename, (fnm), is in platform-independent notation. Fail if the file does not exist. Returns NULL on failure, and calls <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. Returns non-NULL on success. The pointer returned will be passed as the "opaque" parameter for later file calls. </p>
+
+</div>
+</div>
+<a id="abbab15a33c9a194cbe33c1f90c379e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbab15a33c9a194cbe33c1f90c379e06">&#9670;&nbsp;</a></span>openWrite</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_h_y_s_f_s___io.html">PHYSFS_Io</a>*(* openWrite) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a file in this archive for writing. </p>
+<p>If the file does not exist, it should be created. If it exists, it should be truncated to zero bytes. The writing offset should be the start of the file. If the archive is read-only, this operation should fail. This filename is in platform-independent notation. Returns NULL on failure, and calls <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. Returns non-NULL on success. The pointer returned will be passed as the "opaque" parameter for later file calls. </p>
+
+</div>
+</div>
+<a id="aaff79c45931d7802fb62512e5654afb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff79c45931d7802fb62512e5654afb5">&#9670;&nbsp;</a></span>remove</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* remove) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete a file or directory in the archive. </p>
+<p>This same call is used for both files and directories; there is not a separate rmdir() call. Directories are only meant to be removed if they are empty. If the archive is read-only, this operation should fail.</p>
+<p>Return non-zero on success, zero on failure. This filename is in platform-independent notation. On failure, call <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. </p>
+
+</div>
+</div>
+<a id="ac7733d3fb2db064c34bc6cb4b8cd81b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7733d3fb2db064c34bc6cb4b8cd81b0">&#9670;&nbsp;</a></span>stat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* stat) (<a class="el" href="png_8h.html#ac9c84fa68bbad002983e35ce3663c686">void</a> *opaque, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *fn, <a class="el" href="struct_p_h_y_s_f_s___stat.html">PHYSFS_Stat</a> *stat)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain basic file metadata. </p>
+<p>On success, fill in all the fields in (stat), using reasonable defaults for fields that apply to your archive.</p>
+<p>Returns non-zero on success, zero on failure. This filename is in platform-independent notation. On failure, call <a class="el" href="physfs_8h.html#ade2c854542c68abc2015649fadd3a623" title="Set the current thread&#39;s error code.">PHYSFS_setErrorCode()</a>. </p>
+
+</div>
+</div>
+<a id="a8a4760b3b9f4481e3f79ac1e4160fbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4760b3b9f4481e3f79ac1e4160fbd1">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="physfs_8h.html#aae011b45ebd619edb193fe196e1f5f74">PHYSFS_uint32</a> version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Binary compatibility information. </p>
+<p>This must be set to zero at this time. Future versions of this struct will increment this field, so we know what a given implementation supports. We'll presumably keep supporting older versions as we offer new features, though. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_p_h_y_s_f_s___archiver.html">PHYSFS_Archiver</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

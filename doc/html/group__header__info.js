@@ -1,0 +1,57 @@
+var group__header__info =
+[
+    [ "OpusHead", "struct_opus_head.html", [
+      [ "channel_count", "struct_opus_head.html#a96d7ea6e330c0d1775397c867d1252f8", null ],
+      [ "coupled_count", "struct_opus_head.html#a682bc1814b45570e2c4ce3100b3862fb", null ],
+      [ "input_sample_rate", "struct_opus_head.html#ac502c5223a3db3c7e75e2a502c1513d2", null ],
+      [ "mapping", "struct_opus_head.html#a456bddc3af4b0f3405539f92725c7e19", null ],
+      [ "mapping_family", "struct_opus_head.html#a4cd959cef8b597992db63c9d2cb14ad2", null ],
+      [ "output_gain", "struct_opus_head.html#a82fc30012acee28c971a6f7047410b8c", null ],
+      [ "pre_skip", "struct_opus_head.html#ac1e8b72dbfdffe81ae5457fefea6c95a", null ],
+      [ "stream_count", "struct_opus_head.html#ab344671ebe750d85a19ff1115ee2401a", null ],
+      [ "version", "struct_opus_head.html#aad880fc4455c253781e8968f2239d56f", null ]
+    ] ],
+    [ "OpusTags", "struct_opus_tags.html", [
+      [ "comment_lengths", "struct_opus_tags.html#ae72987603e9d906cc11e2169de657f76", null ],
+      [ "comments", "struct_opus_tags.html#a11e6919f29e213f13ff74f111239bf1e", null ],
+      [ "user_comments", "struct_opus_tags.html#a48975b50c044d6c3cc280d37f5705e55", null ],
+      [ "vendor", "struct_opus_tags.html#af8aeeeac33cb3d69a5bd1640e138f238", null ]
+    ] ],
+    [ "OpusPictureTag", "struct_opus_picture_tag.html", [
+      [ "colors", "struct_opus_picture_tag.html#a824e88055d7273bea3469a7a8df081c6", null ],
+      [ "data", "struct_opus_picture_tag.html#ac24cea2bfcc927fd29bc74d1086707d8", null ],
+      [ "data_length", "struct_opus_picture_tag.html#ab6387707d2b9e9e78c9bf41b5df13a42", null ],
+      [ "depth", "struct_opus_picture_tag.html#a093d81faa4a90421b4635241609d5ea1", null ],
+      [ "description", "struct_opus_picture_tag.html#a8444d6e0dfe2bbab0b5e7b24308f1559", null ],
+      [ "format", "struct_opus_picture_tag.html#a317afff57d87a89158c2b038d37b2b08", null ],
+      [ "height", "struct_opus_picture_tag.html#afd9ef69bcbb2a73532d08aca40752cb7", null ],
+      [ "mime_type", "struct_opus_picture_tag.html#acda933efdc515b632bbace5658402427", null ],
+      [ "type", "struct_opus_picture_tag.html#a5fa812a946efd56e5f04c10eeab2a76c", null ],
+      [ "width", "struct_opus_picture_tag.html#a482033384f83e02ec55ffee2786d8703", null ]
+    ] ],
+    [ "OP_PIC_FORMAT_GIF", "group__header__info.html#gaa7d5e8cb675cb2da840f258b761e7781", null ],
+    [ "OP_PIC_FORMAT_JPEG", "group__header__info.html#gaf75ae037b78a4a048359261439395450", null ],
+    [ "OP_PIC_FORMAT_PNG", "group__header__info.html#ga703554b177ae75bd6999bbd30d485d3f", null ],
+    [ "OP_PIC_FORMAT_UNKNOWN", "group__header__info.html#gade2f09dce6330529fc3c96d1740df653", null ],
+    [ "OP_PIC_FORMAT_URL", "group__header__info.html#gaac4ef30a33caf090b9b1a5ada8f48204", null ],
+    [ "OPUS_CHANNEL_COUNT_MAX", "group__header__info.html#gad6f0329582430a828244045ac85a5417", null ],
+    [ "opus_granule_sample", "group__header__info.html#gaac9c6e1916fba6e53152b936055d3db0", null ],
+    [ "opus_head_parse", "group__header__info.html#gac3259b44ac8dfac93c7adf708de96d78", null ],
+    [ "opus_picture_tag_clear", "group__header__info.html#ga26a732722fc74274d76b855020822852", null ],
+    [ "opus_picture_tag_init", "group__header__info.html#ga09b9724bb7a9abd1d78680bd7d420ec2", null ],
+    [ "opus_picture_tag_parse", "group__header__info.html#ga6487af1d21fe87f4815567d85a27989a", null ],
+    [ "opus_tagcompare", "group__header__info.html#gaad7582aee9be320d26b13f77e7b54106", null ],
+    [ "opus_tagncompare", "group__header__info.html#gabf02fa65e49fde045ef787e42ef7b8c0", null ],
+    [ "opus_tags_add", "group__header__info.html#ga42bc0321740b618271c4cd0ae076d29a", null ],
+    [ "opus_tags_add_comment", "group__header__info.html#ga76ac5425d8c2ca9a994f84adfcc6cb98", null ],
+    [ "opus_tags_clear", "group__header__info.html#ga16d4f85561a965d56e0c5177fa129c35", null ],
+    [ "opus_tags_copy", "group__header__info.html#gaceda528fa8f9f9ad1443df2eeeeaa8bf", null ],
+    [ "opus_tags_get_album_gain", "group__header__info.html#gab830a22ec7341069f3928d505ad04a56", null ],
+    [ "opus_tags_get_binary_suffix", "group__header__info.html#gac13718002d2ca508ed1c04a40339877d", null ],
+    [ "opus_tags_get_track_gain", "group__header__info.html#ga093ce83b90c68951f2e6aedc66344ce5", null ],
+    [ "opus_tags_init", "group__header__info.html#ga35f993f5a8f11337a6503a2f43996fea", null ],
+    [ "opus_tags_parse", "group__header__info.html#gaed7c41a177cc7338ffec1e7ae57c59b1", null ],
+    [ "opus_tags_query", "group__header__info.html#gad43a7ed5844debd7d4025335f096bc27", null ],
+    [ "opus_tags_query_count", "group__header__info.html#ga6e0bbe5a717115180bf4aa596bd0b2d1", null ],
+    [ "opus_tags_set_binary_suffix", "group__header__info.html#ga670be1155863aabc9f8d2cf064021131", null ]
+];

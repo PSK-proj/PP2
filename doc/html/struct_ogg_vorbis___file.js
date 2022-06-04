@@ -1,0 +1,25 @@
+var struct_ogg_vorbis___file =
+[
+    [ "bittrack", "struct_ogg_vorbis___file.html#a2d8e6b810d07b6ef5976ca0c601141b9", null ],
+    [ "callbacks", "struct_ogg_vorbis___file.html#a95289d00b2a2f13ba2f75658829dca7b", null ],
+    [ "current_link", "struct_ogg_vorbis___file.html#a47427f15e330b4c727f339f4d7d9a01c", null ],
+    [ "current_serialno", "struct_ogg_vorbis___file.html#a91653caffe9989b75b34a4bffb287860", null ],
+    [ "dataoffsets", "struct_ogg_vorbis___file.html#a345bf9b6b32ba9bab0b3b76d4443673c", null ],
+    [ "datasource", "struct_ogg_vorbis___file.html#a66346be2ea1b1dd3813736365987e7e9", null ],
+    [ "end", "struct_ogg_vorbis___file.html#a2bd28d00f8b7d899553e538f00cd0d68", null ],
+    [ "links", "struct_ogg_vorbis___file.html#a3639f98a67c57cea3996c6273218342e", null ],
+    [ "offset", "struct_ogg_vorbis___file.html#af542eebde84ac7574ee61ad858f60ac6", null ],
+    [ "offsets", "struct_ogg_vorbis___file.html#a6711918f6c05928b513067edf0a8cbb4", null ],
+    [ "os", "struct_ogg_vorbis___file.html#ad965facc291b45427ceb978e7a9d5be3", null ],
+    [ "oy", "struct_ogg_vorbis___file.html#a95fa503eb231a7512cec4dc06008afa2", null ],
+    [ "pcm_offset", "struct_ogg_vorbis___file.html#af95743f9a3f54b3a97a5b5649ac8aa77", null ],
+    [ "pcmlengths", "struct_ogg_vorbis___file.html#a642ed11b3f3c381e16896d8d7da3ac78", null ],
+    [ "ready_state", "struct_ogg_vorbis___file.html#ac6700b2b3ad1237db0ed87a6a25258d0", null ],
+    [ "samptrack", "struct_ogg_vorbis___file.html#ab8acc6fbf8a7abfec98c041d4ab42c10", null ],
+    [ "seekable", "struct_ogg_vorbis___file.html#afc978926283246071a01ae14f0d94a79", null ],
+    [ "serialnos", "struct_ogg_vorbis___file.html#a65be348d3a105f1f884df9547e7cb431", null ],
+    [ "vb", "struct_ogg_vorbis___file.html#a57c82214745cb35c71013c3497d7fdf8", null ],
+    [ "vc", "struct_ogg_vorbis___file.html#af180dac0bf8a28e87d9930bd5ad0ad39", null ],
+    [ "vd", "struct_ogg_vorbis___file.html#adfbdb846c236ee5a610554c680b01345", null ],
+    [ "vi", "struct_ogg_vorbis___file.html#a3718e163d88bcd6b22447c6b5524e218", null ]
+];

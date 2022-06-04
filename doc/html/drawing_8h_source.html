@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Plik źródłowy PP2/packages/Allegro.5.2.7.1/build/native/include/allegro5/drawing.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('drawing_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">drawing.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drawing_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __al_included_allegro5_drawing_h</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __al_included_allegro5_drawing_h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="color_8h.html">allegro5/color.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;   <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* Drawing primitives */</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="drawing_8h.html#a9d0896c02e7e197811d4df0fbc96caf6">AL_FUNC</a>(<span class="keywordtype">void</span>, al_clear_to_color, (<a class="code" href="struct_a_l_l_e_g_r_o___c_o_l_o_r.html">ALLEGRO_COLOR</a> color));</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="drawing_8h.html#a9d0896c02e7e197811d4df0fbc96caf6">AL_FUNC</a>(<span class="keywordtype">void</span>, al_clear_depth_buffer, (<span class="keywordtype">float</span> <a class="code" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>));</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="drawing_8h.html#a9d0896c02e7e197811d4df0fbc96caf6">AL_FUNC</a>(<span class="keywordtype">void</span>, al_draw_pixel, (<span class="keywordtype">float</span> <a class="code" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, <span class="keywordtype">float</span> <a class="code" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>, <a class="code" href="struct_a_l_l_e_g_r_o___c_o_l_o_r.html">ALLEGRO_COLOR</a> color));</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* vim: set ts=8 sts=3 sw=3 et: */</span></div><div class="ttc" id="fmaths_8inl_html_a7ba8ab2f1e8f362163e17da3f15a5db9"><div class="ttname"><a href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a></div><div class="ttdeci">al_fixed x</div><div class="ttdef"><b>Definition:</b> fmaths.inl:46</div></div>
+<div class="ttc" id="drawing_8h_html_a9d0896c02e7e197811d4df0fbc96caf6"><div class="ttname"><a href="drawing_8h.html#a9d0896c02e7e197811d4df0fbc96caf6">AL_FUNC</a></div><div class="ttdeci">AL_FUNC(void, al_clear_to_color,(ALLEGRO_COLOR color))</div></div>
+<div class="ttc" id="struct_a_l_l_e_g_r_o___c_o_l_o_r_html"><div class="ttname"><a href="struct_a_l_l_e_g_r_o___c_o_l_o_r.html">ALLEGRO_COLOR</a></div><div class="ttdef"><b>Definition:</b> color.h:15</div></div>
+<div class="ttc" id="color_8h_html"><div class="ttname"><a href="color_8h.html">color.h</a></div></div>
+<div class="ttc" id="fmaths_8inl_html_ad01ab75ae50a1a624185bfa014c66cfa"><div class="ttname"><a href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a></div><div class="ttdeci">al_fixed al_fixed al_fixed y</div><div class="ttdef"><b>Definition:</b> fmaths.inl:75</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2ec24ee4352d83bc7f106b157911ae22.html">PP2</a></li><li class="navelem"><a class="el" href="dir_90b44090e90ccec099edce015227bf64.html">packages</a></li><li class="navelem"><a class="el" href="dir_a2af61dbc3b6d19f2bf2c2409e9db10b.html">Allegro.5.2.7.1</a></li><li class="navelem"><a class="el" href="dir_d3cd4fdc2a6e64041b9f8d3986356a93.html">build</a></li><li class="navelem"><a class="el" href="dir_53244d09d2b12c6804e78a14256b4bd1.html">native</a></li><li class="navelem"><a class="el" href="dir_f8233e1854002409051003e6f65cd858.html">include</a></li><li class="navelem"><a class="el" href="dir_ceabdca1b2bc054fc64cb41151c1d866.html">allegro5</a></li><li class="navelem"><a class="el" href="drawing_8h.html">drawing.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

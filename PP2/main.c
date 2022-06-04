@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   main.c
+ * \brief  
+ * Gra Saper
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Czerwiec 2022
+ *********************************************************************/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -12,6 +20,16 @@
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_font.h>
 
+/// <summary>
+/// Losowanie bomb.
+/// 
+/// Ta funkcja odpowiada za wylosowanie pozycji bomby oraz umieszczenie jej na planszy. Jej oznaczenie to wartość "-1" (w tablicy planszy na odpowiednim miejscu pojawia się wartość -1).
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <param name="bombs">Ilosc bomb w wybranym poziomie trudnosci</param>
+/// <param name="bombs_list">Wskaznik na tablice, w ktorej zakodowane sa pozycje bomb</param>
 void bombs_draw(int** tab, unsigned char x, unsigned char y, unsigned short bombs, unsigned short* bombs_list)
 {
 	unsigned char x_b, y_b;
@@ -30,6 +48,17 @@ void bombs_draw(int** tab, unsigned char x, unsigned char y, unsigned short bomb
 	}
 }
 
+/// <summary>
+/// Numeracja pól.
+/// 
+/// Ta funkcja odpowiada za nadanie każdemu polu odpowiedniego numeru. Numerem tym jest ilość bomb znajdujących się wokół tego pola, zatem wartości są z zakresu 0-8.
+/// Numery zapisywane są w tablicy planszy.
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <param name="bombs">Ilosc bomb w wybranym poziomie trudnosci</param>
+/// <param name="bombs_list">Wskaznik na tablice, w ktorej zakodowane sa pozycje bomb</param>
 void set_field_numbers(int** tab, unsigned char x, unsigned char y, unsigned short bombs, unsigned short* bombs_list)
 {
 	unsigned char x_b, y_b;
@@ -53,6 +82,15 @@ void set_field_numbers(int** tab, unsigned char x, unsigned char y, unsigned sho
 	}
 }
 
+/// <summary>
+/// Czyszczenie planszy.
+/// 
+/// Ta funkcja czysci plansze gry ustawiajac wartosci w tablicy na 0. Jest to przydatne podczas inicjowania rozgrywki, gdyz zapewnia, ze w pamieci nie pozostaly zadne niechciane dane, 
+/// oraz ze operacje wykonywane na tej tablicy dadza przewidywany skutek.
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
 void clear_board(int** tab, unsigned char x, unsigned char y)
 {
 	for (int i = 0; i < y; i++)
@@ -60,6 +98,14 @@ void clear_board(int** tab, unsigned char x, unsigned char y)
 			tab[i][j] = 0;
 }
 
+/// <summary>
+/// Alokacja pamieci dla list bomb.
+/// 
+/// Ta funkcja odpowiada za zaalokowanie pamieci dla tablicy bomb o wybranej dlugosci (zaleznie od ilosci bomb, ktora to zalezy od wybranego poziomu trudnosci).
+/// Tablica ta jest przeznaczona do zakodowania koordynatow bomb na planszy.
+/// </summary>
+/// <param name="bombs">Ilosc bomb w wybranym poziomie trudnosci</param>
+/// <returns>Wskaznik na tablice bomb</returns>
 unsigned short* create_bombs_list(unsigned short bombs)
 {
 	unsigned short* bombs_list;
@@ -67,26 +113,45 @@ unsigned short* create_bombs_list(unsigned short bombs)
 	return bombs_list;
 }
 
+/// <summary>
+/// Alokacja pamieci dla planszy gry i tablicy kliknietych pol.
+/// 
+/// Ta funkcja odpowiada za zaalokowanie pamieci dla dwuwymiarowej tablicy. Wykorzystywana jest do stworzenia planszy gry oraz niewidocznej dla uzytkownika tablicy kliknietych pol.
+/// </summary>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <returns>Podwojny wskaznik na tablice planszy</returns>
 int **create_board(unsigned char x, unsigned char y)
 {
 	int** p;
 	int* temp;
 
 	p = (int**)malloc(
-		sizeof(int*) * y + //tab ptr
-		sizeof(int) * y * x //tab int * ilo�� wierszy
+		sizeof(int*) * y + 
+		sizeof(int) * y * x 
 	);
 
-	temp = (int*)&p[y]; // y - ostatni element tablicy wska�nik�w
+	temp = (int*)&p[y];
 	for (int i = 0; i < y; i++)
 	{
 		p[i] = temp;
-		temp += x; // x - wielko�� wiersza
+		temp += x; 
 	}
 
 	return p;
 }
 
+/// <summary>
+/// Wybieranie poziomu trudnosci.
+/// 
+/// Ta funkcja odpowiada za ustawienie odpowiednich wartosci zmiennych w zaleznosci od wyboru poziomu trudnosci gry. Zmienia sie rozmiar planszy oraz ilosc bomb. 
+/// </summary>
+/// <param name="x">Wskaznik na zmienna przechowujaca rozmiar planszy w osi X</param>
+/// <param name="y">Wskaznik na zmienna przechowujaca rozmiar planszy w osi Y</param>
+/// <param name="bombs">Wskaznik na zmienna przechowujaca ilosc bomb</param>
+/// <param name="mode">Wskaznik na zmienna przechowujaca numer wybranego poziomu trudnosci</param>
+/// <param name="margin_x">Wskaznik na zmienna przechowujaca margines planszy od krawedzi okna w osi X</param>
+/// <param name="margin_y">Wskaznik na zmienna przechowujaca margines planszy od krawedzi okna w osi Y</param>
 void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsigned char* mode, unsigned short* margin_x, unsigned short* margin_y)
 {
 	switch (*mode)
@@ -122,7 +187,11 @@ void lvl_select(unsigned char* x, unsigned char* y, unsigned short* bombs, unsig
 	}
 }
 
-
+/// <summary>
+/// Wyswietlanie menu.
+/// 
+/// Ta funkcja odpowiada za wyswietlenie menu pokazujacego dostepne tryby gry.
+/// </summary>
 void allegro_display_menu()
 {
 	ALLEGRO_BITMAP* baner;
@@ -148,6 +217,18 @@ void allegro_display_menu()
 	al_destroy_bitmap(mode3);
 }
 
+/// <summary>
+/// Rysowanie pol na planszy gry.
+/// 
+/// Ta funkcja odpowiada za wyrysowanie na ekranie kafelkow planszy ulozonych w siatke zgodna z rozmiarami odpowiednimi do poziomu trudnosci gry.
+/// Funkcja wie, w ktorym miejscu wyrysowac opowiednia bitmape dzieki tablicy kliknietych pol.
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="clicked">Wskaznik na dwuwymiarowa tablice - macierz kliknietych pol</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <param name="margin_x">Zmienna przechowujaca margines planszy od krawedzi okna w osi X</param>
+/// <param name="margin_y">Zmienna przechowujaca margines planszy od krawedzi okna w osi Y</param>
 void allegro_draw_fields(int** tab, int** clicked, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y)
 {
 	ALLEGRO_BITMAP* hidden;
@@ -216,6 +297,11 @@ void allegro_draw_fields(int** tab, int** clicked, unsigned char x, unsigned cha
 	al_destroy_bitmap(eight);
 }
 
+/// <summary>
+/// Wyswietlanie wygranej.
+/// 
+/// Ta funkcja odpowiada za wyswietlenie bitmapy informujacej uzytkownika o wyrganej.
+/// </summary>
 void allegro_display_win()
 {
 	al_clear_to_color(al_map_rgb(0, 0, 0), 0, 0);
@@ -230,6 +316,13 @@ void allegro_display_win()
 	al_destroy_bitmap(win);
 }
 
+/// <summary>
+/// Wyswietlanie statystyk.
+/// 
+/// Ta funkcja odpowiada za wyswietlenie podczas gry statystyk: ilosci nieoznaczonych bomb oraz czasu, ktory uplynal od rozpoczecia rozgrywki.
+/// </summary>
+/// <param name="bombs_remain">Zmienna przechowujaca ilosc bomb pozostalych do oznaczenia</param>
+/// <param name="time">Zmienna przechowujaca ilosc czasu, ktory uplynal w grze</param>
 void allegro_display_stats(short bombs_remain, int time)
 {
 	char* bombs_string = malloc(4);
@@ -253,6 +346,19 @@ void allegro_display_stats(short bombs_remain, int time)
 	al_destroy_font(roboto_bold_italic);
 }
 
+/// <summary>
+/// Odkrywanie bezpiecznych obszarow.
+/// 
+/// Ta funkcja odpowiada za odkrycie calego obszaru, wokol ktorego nie znajduje sie zadna bomba (pola graficznie bez numerkow, w tablicy jako 0). Pola sa odkrywane rekurencyjnie az do
+/// napotkania pola z numerkiem dodatnim. 
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="clicked">Wskaznik na dwuwymiarowa tablice - macierz kliknietych pol</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <param name="clicks_made">Wskaznik na zmienna przechowujaca ilosc wykonanych odsloniec pol (potrzebna do wykrycia wygranej)</param>
+/// <param name="clicked_x">Zmienna przechowyjaca koordynat X kliknietego kafelka</param>
+/// <param name="clicked_y">Zmienna przechowyjaca koordynat Y kliknietego kafelka</param>
 void show_safe(int** tab, int** clicked, unsigned char x, unsigned char y, unsigned short* clicks_made, int clicked_x, int clicked_y)
 {
 	unsigned short x_f_p, y_f_p;
@@ -274,6 +380,26 @@ void show_safe(int** tab, int** clicked, unsigned char x, unsigned char y, unsig
 	}
 }
 
+/// <summary>
+/// Obsluga klikniec, informacje o stanie gry.
+/// 
+/// Funkcja ta odpowiada za odczytanie pozycji kurosra w oknie gry w momencie wykonywania klikniecia i przeliczenia jej na koordynat kafelka, ktory znajdowal sie w tym momencie pod kursorem.
+/// Pozycja ta zapisywana jest w zmiennych przechowujacych te koordynaty.
+/// Dodatkowo funkcja obsluguje sprawdzanie czy dany ruch jest dopuszczalny przez zasady, a takze zwraca informacje o obecnym stanie gry po wykonaniu przez uzytkownika poprawnej interakcji.
+/// </summary>
+/// <param name="tab">Wskaznik na dwuwymiarowa tablice - plansze</param>
+/// <param name="clicked">Wskaznik na dwuwymiarowa tablice - macierz kliknietych pol</param>
+/// <param name="bombs">Ilosc bomb w wybranym poziomie trudnosci</param>
+/// <param name="x">Rozmiar planszy w osi X (zalezy od poziomu trudnosci)</param>
+/// <param name="y">Rozmiar planszy w osi Y (zalezy od poziomu trudnosci)</param>
+/// <param name="margin_x">Zmienna przechowujaca margines planszy od krawedzi okna w osi X</param>
+/// <param name="margin_y">Zmienna przechowujaca margines planszy od krawedzi okna w osi Y</param>
+/// <param name="mouse_x">Pozycja w osi X kursora w oknie programu</param>
+/// <param name="mouse_y">Pozycja w osi Y kursora w oknie programu</param>
+/// <param name="event">Wskaznik na instancje unii eventow z biblioteki Allegro5</param>
+/// <param name="bombs_remain">Wskaznik na zmienna przechowujaca ilosc bomb pozostalych do oznaczenia</param>
+/// <param name="clicks_made">Wskaznik na zmienna przechowujaca ilosc wykonanych odsloniec pol (potrzebna do wykrycia wygranej)</param>
+/// <returns>Informacje o stanie gry. "-1" - przegrana, "1" - wygrana, "0" - gra w toku</returns>
 int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned char x, unsigned char y, unsigned short margin_x, unsigned short margin_y, float mouse_x, float mouse_y, ALLEGRO_EVENT* event, short* bombs_remain, unsigned short* clicks_made)
 {
 	int clicked_x = (mouse_x - margin_x) / 30;
@@ -294,7 +420,7 @@ int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned 
 				*clicks_made = *clicks_made + 1;
 				if (*clicks_made == (x * y) - bombs) return 1;
 		}
-		if (event->mouse.button & 2 && clicked[clicked_y][clicked_x] != 10) //stawianie flagi
+		if (event->mouse.button & 2 && clicked[clicked_y][clicked_x] != 10)
 		{
 			if (clicked[clicked_y][clicked_x] == 0)
 			{
@@ -311,7 +437,9 @@ int handle_field_click(int** tab, int** clicked, unsigned short bombs, unsigned 
 	return 0;
 }
 
-
+/// <summary>
+/// Glowna funkcja programu.
+/// </summary>
 int main()
 {
 	system("CHCP 1250 >NUL");

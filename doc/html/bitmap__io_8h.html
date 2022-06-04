@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja pliku PP2/packages/Allegro.5.2.7.1/build/native/include/allegro5/bitmap_io.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('bitmap__io_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Definicje typów</a> &#124;
+<a href="#enum-members">Wyliczenia</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku bitmap_io.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bitmap_8h_source.html">allegro5/bitmap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="file_8h_source.html">allegro5/file.h</a>&quot;</code><br />
+</div>
+<p><a href="bitmap__io_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Definicje typów</h2></td></tr>
+<tr class="memitem:a64599be229d5a56fcaffd7b96537dc3f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a64599be229d5a56fcaffd7b96537dc3f">ALLEGRO_IIO_LOADER_FUNCTION</a>) (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, int flags)</td></tr>
+<tr class="separator:a64599be229d5a56fcaffd7b96537dc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ac720e4dc7d7874c69983ff1ed0405"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#aa4ac720e4dc7d7874c69983ff1ed0405">ALLEGRO_IIO_FS_LOADER_FUNCTION</a>) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, int flags)</td></tr>
+<tr class="separator:aa4ac720e4dc7d7874c69983ff1ed0405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628a4d5391a39593d7656f148f94c2bc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a628a4d5391a39593d7656f148f94c2bc">ALLEGRO_IIO_SAVER_FUNCTION</a>) (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)</td></tr>
+<tr class="separator:a628a4d5391a39593d7656f148f94c2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946ba3e9d08dd10e6579f343c2f0c867"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a946ba3e9d08dd10e6579f343c2f0c867">ALLEGRO_IIO_FS_SAVER_FUNCTION</a>) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)</td></tr>
+<tr class="separator:a946ba3e9d08dd10e6579f343c2f0c867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fb028fb24e5ea4c2d611daa741aaa1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a85fb028fb24e5ea4c2d611daa741aaa1">ALLEGRO_IIO_IDENTIFIER_FUNCTION</a>) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *f)</td></tr>
+<tr class="separator:a85fb028fb24e5ea4c2d611daa741aaa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Wyliczenia</h2></td></tr>
+<tr class="memitem:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="bitmap__io_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a6e344057dd332824a3160e4559203a17">ALLEGRO_KEEP_BITMAP_FORMAT</a> = 0x0002, 
+<a class="el" href="bitmap__io_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a0f46ea81b37c7888c37ad694ed51b8e3">ALLEGRO_NO_PREMULTIPLIED_ALPHA</a> = 0x0200, 
+<a class="el" href="bitmap__io_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a8b61daba538981aa025c52ecebac550b">ALLEGRO_KEEP_INDEX</a> = 0x0800
+ }</td></tr>
+<tr class="separator:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a7ead53aec781e9c43dcdf35e62846310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a7ead53aec781e9c43dcdf35e62846310">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_register_bitmap_loader,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a64599be229d5a56fcaffd7b96537dc3f">ALLEGRO_IIO_LOADER_FUNCTION</a> loader))</td></tr>
+<tr class="separator:a7ead53aec781e9c43dcdf35e62846310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae471c06b8299a2d488bea9c61650e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#aae471c06b8299a2d488bea9c61650e38">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_register_bitmap_saver,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a628a4d5391a39593d7656f148f94c2bc">ALLEGRO_IIO_SAVER_FUNCTION</a> saver))</td></tr>
+<tr class="separator:aae471c06b8299a2d488bea9c61650e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f1bef8b6942c9011d14284c3fa31dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a59f1bef8b6942c9011d14284c3fa31dc">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_register_bitmap_loader_f,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#aa4ac720e4dc7d7874c69983ff1ed0405">ALLEGRO_IIO_FS_LOADER_FUNCTION</a> fs_loader))</td></tr>
+<tr class="separator:a59f1bef8b6942c9011d14284c3fa31dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e671408b28a30b401cb60821e9bfc84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a0e671408b28a30b401cb60821e9bfc84">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_register_bitmap_saver_f,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a946ba3e9d08dd10e6579f343c2f0c867">ALLEGRO_IIO_FS_SAVER_FUNCTION</a> fs_saver))</td></tr>
+<tr class="separator:a0e671408b28a30b401cb60821e9bfc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176c0a0d4eb0461eb623082b67876be4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a176c0a0d4eb0461eb623082b67876be4">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_register_bitmap_identifier,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a85fb028fb24e5ea4c2d611daa741aaa1">ALLEGRO_IIO_IDENTIFIER_FUNCTION</a> identifier))</td></tr>
+<tr class="separator:a176c0a0d4eb0461eb623082b67876be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77304c19ea04e5a82f449e47877e9f63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a77304c19ea04e5a82f449e47877e9f63">AL_FUNC</a> (<a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *, al_load_bitmap,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename))</td></tr>
+<tr class="separator:a77304c19ea04e5a82f449e47877e9f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4d220aadd89071e41c3642295d3045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a1f4d220aadd89071e41c3642295d3045">AL_FUNC</a> (<a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *, al_load_bitmap_flags,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, int flags))</td></tr>
+<tr class="separator:a1f4d220aadd89071e41c3642295d3045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b381f5be414220f0da223a8063f169"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a20b381f5be414220f0da223a8063f169">AL_FUNC</a> (<a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *, al_load_bitmap_f,(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident))</td></tr>
+<tr class="separator:a20b381f5be414220f0da223a8063f169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8a52f2736f21a575096e5bd39645dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a9f8a52f2736f21a575096e5bd39645dc">AL_FUNC</a> (<a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *, al_load_bitmap_flags_f,(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident, int flags))</td></tr>
+<tr class="separator:a9f8a52f2736f21a575096e5bd39645dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e86a4528fa1a1047d4cc6ee819b6ce6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a6e86a4528fa1a1047d4cc6ee819b6ce6">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_save_bitmap,(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap))</td></tr>
+<tr class="separator:a6e86a4528fa1a1047d4cc6ee819b6ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65096002767b86d718d4a1ff3db5be65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a65096002767b86d718d4a1ff3db5be65">AL_FUNC</a> (<a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>, al_save_bitmap_f,(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap))</td></tr>
+<tr class="separator:a65096002767b86d718d4a1ff3db5be65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95971f82992a089d0ba826e81ae697c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#ae95971f82992a089d0ba826e81ae697c">AL_FUNC</a> (char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *, al_identify_bitmap_f,(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp))</td></tr>
+<tr class="separator:ae95971f82992a089d0ba826e81ae697c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ef2700a989c07323a2091937b9aabf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitmap__io_8h.html#a63ef2700a989c07323a2091937b9aabf">AL_FUNC</a> (char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *, al_identify_bitmap,(char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *filename))</td></tr>
+<tr class="separator:a63ef2700a989c07323a2091937b9aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji typów</h2>
+<a id="aa4ac720e4dc7d7874c69983ff1ed0405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ac720e4dc7d7874c69983ff1ed0405">&#9670;&nbsp;</a></span>ALLEGRO_IIO_FS_LOADER_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a>*(* ALLEGRO_IIO_FS_LOADER_FUNCTION) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, int flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a946ba3e9d08dd10e6579f343c2f0c867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a946ba3e9d08dd10e6579f343c2f0c867">&#9670;&nbsp;</a></span>ALLEGRO_IIO_FS_SAVER_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(* ALLEGRO_IIO_FS_SAVER_FUNCTION) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85fb028fb24e5ea4c2d611daa741aaa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fb028fb24e5ea4c2d611daa741aaa1">&#9670;&nbsp;</a></span>ALLEGRO_IIO_IDENTIFIER_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(* ALLEGRO_IIO_IDENTIFIER_FUNCTION) (<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64599be229d5a56fcaffd7b96537dc3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64599be229d5a56fcaffd7b96537dc3f">&#9670;&nbsp;</a></span>ALLEGRO_IIO_LOADER_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a>*(* ALLEGRO_IIO_LOADER_FUNCTION) (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, int flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a628a4d5391a39593d7656f148f94c2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628a4d5391a39593d7656f148f94c2bc">&#9670;&nbsp;</a></span>ALLEGRO_IIO_SAVER_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>(* ALLEGRO_IIO_SAVER_FUNCTION) (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
+<a id="ab04a0655cd1e3bcac5e8f48c18df1a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04a0655cd1e3bcac5e8f48c18df1a57">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="ab04a0655cd1e3bcac5e8f48c18df1a57a6e344057dd332824a3160e4559203a17"></a>ALLEGRO_KEEP_BITMAP_FORMAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab04a0655cd1e3bcac5e8f48c18df1a57a0f46ea81b37c7888c37ad694ed51b8e3"></a>ALLEGRO_NO_PREMULTIPLIED_ALPHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab04a0655cd1e3bcac5e8f48c18df1a57a8b61daba538981aa025c52ecebac550b"></a>ALLEGRO_KEEP_INDEX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a7ead53aec781e9c43dcdf35e62846310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ead53aec781e9c43dcdf35e62846310">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[1/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_register_bitmap_loader&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a64599be229d5a56fcaffd7b96537dc3f">ALLEGRO_IIO_LOADER_FUNCTION</a> loader)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae471c06b8299a2d488bea9c61650e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae471c06b8299a2d488bea9c61650e38">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[2/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_register_bitmap_saver&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a628a4d5391a39593d7656f148f94c2bc">ALLEGRO_IIO_SAVER_FUNCTION</a> saver)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59f1bef8b6942c9011d14284c3fa31dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f1bef8b6942c9011d14284c3fa31dc">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[3/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_register_bitmap_loader_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#aa4ac720e4dc7d7874c69983ff1ed0405">ALLEGRO_IIO_FS_LOADER_FUNCTION</a> fs_loader)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e671408b28a30b401cb60821e9bfc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e671408b28a30b401cb60821e9bfc84">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[4/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_register_bitmap_saver_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a946ba3e9d08dd10e6579f343c2f0c867">ALLEGRO_IIO_FS_SAVER_FUNCTION</a> fs_saver)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a176c0a0d4eb0461eb623082b67876be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176c0a0d4eb0461eb623082b67876be4">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[5/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_register_bitmap_identifier&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ext, <a class="el" href="bitmap__io_8h.html#a85fb028fb24e5ea4c2d611daa741aaa1">ALLEGRO_IIO_IDENTIFIER_FUNCTION</a> identifier)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77304c19ea04e5a82f449e47877e9f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77304c19ea04e5a82f449e47877e9f63">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[6/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_load_bitmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f4d220aadd89071e41c3642295d3045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4d220aadd89071e41c3642295d3045">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[7/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_load_bitmap_flags&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, int flags)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20b381f5be414220f0da223a8063f169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b381f5be414220f0da223a8063f169">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[8/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_load_bitmap_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f8a52f2736f21a575096e5bd39645dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8a52f2736f21a575096e5bd39645dc">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[9/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_load_bitmap_flags_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident, int flags)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e86a4528fa1a1047d4cc6ee819b6ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e86a4528fa1a1047d4cc6ee819b6ce6">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[10/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_save_bitmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *filename, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65096002767b86d718d4a1ff3db5be65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65096002767b86d718d4a1ff3db5be65">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[11/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="astdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_save_bitmap_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *ident, <a class="el" href="bitmap_8h.html#a97651ee6e8e9e81afb7d8b159591839a">ALLEGRO_BITMAP</a> *bitmap)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae95971f82992a089d0ba826e81ae697c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95971f82992a089d0ba826e81ae697c">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[12/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype">char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_identify_bitmap_f&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="file_8h.html#a9c6d4681b238d8c79191fd6fcc4bd6f8">ALLEGRO_FILE</a> *fp)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63ef2700a989c07323a2091937b9aabf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ef2700a989c07323a2091937b9aabf">&#9670;&nbsp;</a></span>AL_FUNC() <span class="overload">[13/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_FUNC </td>
+          <td>(</td>
+          <td class="paramtype">char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_identify_bitmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(char <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> *filename)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2ec24ee4352d83bc7f106b157911ae22.html">PP2</a></li><li class="navelem"><a class="el" href="dir_90b44090e90ccec099edce015227bf64.html">packages</a></li><li class="navelem"><a class="el" href="dir_a2af61dbc3b6d19f2bf2c2409e9db10b.html">Allegro.5.2.7.1</a></li><li class="navelem"><a class="el" href="dir_d3cd4fdc2a6e64041b9f8d3986356a93.html">build</a></li><li class="navelem"><a class="el" href="dir_53244d09d2b12c6804e78a14256b4bd1.html">native</a></li><li class="navelem"><a class="el" href="dir_f8233e1854002409051003e6f65cd858.html">include</a></li><li class="navelem"><a class="el" href="dir_ceabdca1b2bc054fc64cb41151c1d866.html">allegro5</a></li><li class="navelem"><a class="el" href="bitmap__io_8h.html">bitmap_io.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

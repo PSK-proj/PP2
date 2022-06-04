@@ -1,0 +1,25 @@
+var struct_f_t___glyph_slot_rec__ =
+[
+    [ "advance", "struct_f_t___glyph_slot_rec__.html#a9bb31ad68ceeb25cca930f6a8ba07c6e", null ],
+    [ "bitmap", "struct_f_t___glyph_slot_rec__.html#a83eae6f807326a7bbefb59b5e45b2e27", null ],
+    [ "bitmap_left", "struct_f_t___glyph_slot_rec__.html#aff1b217414753c2d76cdfeb8ed84143d", null ],
+    [ "bitmap_top", "struct_f_t___glyph_slot_rec__.html#aa3db6cc6aecf302214d9720a6ea97e2a", null ],
+    [ "control_data", "struct_f_t___glyph_slot_rec__.html#adf33eb2a498518391c3fa16f289b8ecd", null ],
+    [ "control_len", "struct_f_t___glyph_slot_rec__.html#a77597004434e2a8e549ca60fd8d872f4", null ],
+    [ "face", "struct_f_t___glyph_slot_rec__.html#aa8301da67cd3f6aca160cac906ecac1a", null ],
+    [ "format", "struct_f_t___glyph_slot_rec__.html#a1f801ca0e896ebde8aee237a54a90d5a", null ],
+    [ "generic", "struct_f_t___glyph_slot_rec__.html#a7c1ad5c0a1fea9cbe4bda7cbd3ec1b9b", null ],
+    [ "internal", "struct_f_t___glyph_slot_rec__.html#a93c28d867f4654c4832df1f3385d4245", null ],
+    [ "library", "struct_f_t___glyph_slot_rec__.html#ab4d76021030859eecd1bfe3cbf803551", null ],
+    [ "linearHoriAdvance", "struct_f_t___glyph_slot_rec__.html#a80d6c4bef9926a8a0e26cc5b1f9b6567", null ],
+    [ "linearVertAdvance", "struct_f_t___glyph_slot_rec__.html#aec290bd6489ea7c122fdb1c9925cba8d", null ],
+    [ "lsb_delta", "struct_f_t___glyph_slot_rec__.html#a78ee71194c304663b2baa2b4af1c73bf", null ],
+    [ "metrics", "struct_f_t___glyph_slot_rec__.html#aa89f06b01d0d713802b547aea46a60a8", null ],
+    [ "next", "struct_f_t___glyph_slot_rec__.html#a3cbb1ab5e1b028d6a1d5f4aec103de51", null ],
+    [ "num_subglyphs", "struct_f_t___glyph_slot_rec__.html#a6a22894633cac7b824640ed4880c7fc3", null ],
+    [ "other", "struct_f_t___glyph_slot_rec__.html#ade0028080a430b2645d95b4f0410759d", null ],
+    [ "outline", "struct_f_t___glyph_slot_rec__.html#a26f52083ad6ede7999176939737162de", null ],
+    [ "reserved", "struct_f_t___glyph_slot_rec__.html#aa103d00502f6374f34aa614ca40dd226", null ],
+    [ "rsb_delta", "struct_f_t___glyph_slot_rec__.html#a3d9bc8b80bd65e2a9393e442ad2599b3", null ],
+    [ "subglyphs", "struct_f_t___glyph_slot_rec__.html#a1cafeeefc8daa5cecc351312e8b01316", null ]
+];

@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Dokumentacja pliku PP2/packages/Allegro.5.2.7.1/build/native/include/allegro5/inline/fmaths.inl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('fmaths_8inl.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku fmaths.inl</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="error_8h_source.html">allegro5/error.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a68082877191ea8b13e84fc7c1bac9c7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a68082877191ea8b13e84fc7c1bac9c7d">__al_included_allegro5_inline_fmaths_inl</a></td></tr>
+<tr class="separator:a68082877191ea8b13e84fc7c1bac9c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a212fd5cd1111c68a88623f17e1e4d2b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a212fd5cd1111c68a88623f17e1e4d2b9">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_ftofix,(double <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>), { <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt; 32767.0) { al_set_errno(ERANGE);return 0x7FFFFFFF;} if(x&lt; -32767.0) { al_set_errno(ERANGE);return -0x7FFFFFFF;} return(al_fixed)(x *65536.0+(x&lt; 0 ? -0.5 :0.5));}) AL_INLINE(double</td></tr>
+<tr class="separator:a212fd5cd1111c68a88623f17e1e4d2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f6d5a1431c89de8d088dfb0381426f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a60f6d5a1431c89de8d088dfb0381426f">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_fixadd,(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>), { <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> result=<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>;<a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(result &gt;=0) { <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>&lt; 0) &amp;&amp;(<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>&lt; 0)) { al_set_errno(ERANGE);return -0x7FFFFFFF;} else return result;} else { if((x &gt; 0) &amp;&amp;(y &gt; 0)) { al_set_errno(ERANGE);return 0x7FFFFFFF;} else return result;} }) AL_INLINE(al_fixed</td></tr>
+<tr class="separator:a60f6d5a1431c89de8d088dfb0381426f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad2d7d1a24282db868a211942368bd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a> (result &gt;=0)</td></tr>
+<tr class="separator:a8ad2d7d1a24282db868a211942368bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63e403d22e06b6b3eb4dd9d70c45359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#aa63e403d22e06b6b3eb4dd9d70c45359">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_fixmul,(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>), { <a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> lx=<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>;<a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> ly=<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>;<a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> lres=(lx *ly);<a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(lres &gt; 0x7FFFFFFF0000LL) { al_set_errno(ERANGE);return 0x7FFFFFFF;} else if(lres&lt; -0x7FFFFFFF0000LL) { al_set_errno(ERANGE);return 0x80000000;} else { return(al_fixed)(lres &gt;&gt; 16);} }) AL_INLINE(al_fixed</td></tr>
+<tr class="separator:aa63e403d22e06b6b3eb4dd9d70c45359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9895ed761ecc465d1ed6eb24eb9bcb7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a9895ed761ecc465d1ed6eb24eb9bcb7a">AL_INLINE</a> (int, al_fixfloor,(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>), { <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt;=0) return(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt;&gt; 16);<a class="el" href="fmaths_8inl.html#a0544c3fe466e421738dae463968b70ba">else</a> return ~((~<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>) &gt;&gt; 16);}) AL_INLINE(int</td></tr>
+<tr class="separator:a9895ed761ecc465d1ed6eb24eb9bcb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e2a4e4da25547bca9cb2e53e4d4e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a94e2a4e4da25547bca9cb2e53e4d4e8e">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_itofix,(int <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>), { return <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>&lt;&lt; 16;}) AL_INLINE(int</td></tr>
+<tr class="separator:a94e2a4e4da25547bca9cb2e53e4d4e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819c331675fc56dbad3f5c31a52d58fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a819c331675fc56dbad3f5c31a52d58fa">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_fixcos,(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>), { return _al_fix_cos_tbl[((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+0x4000) &gt;&gt; 15) &amp;0x1FF];}) AL_INLINE(al_fixed</td></tr>
+<tr class="separator:a819c331675fc56dbad3f5c31a52d58fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914bc5a5d1a6a2fb2f1da16048169c25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a914bc5a5d1a6a2fb2f1da16048169c25">AL_INLINE</a> (<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>, al_fixtan,(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>), { return _al_fix_tan_tbl[((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+0x4000) &gt;&gt; 15) &amp;0xFF];}) AL_INLINE(al_fixed</td></tr>
+<tr class="separator:a914bc5a5d1a6a2fb2f1da16048169c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:aa1e2c601fa27155cba5c96c6f7a541d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#aa1e2c601fa27155cba5c96c6f7a541d6">al_fixtof</a></td></tr>
+<tr class="separator:aa1e2c601fa27155cba5c96c6f7a541d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba8ab2f1e8f362163e17da3f15a5db9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a></td></tr>
+<tr class="separator:a7ba8ab2f1e8f362163e17da3f15a5db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d08ff07fc58a72689782633b1be661"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a55d08ff07fc58a72689782633b1be661">al_fixsub</a></td></tr>
+<tr class="separator:a55d08ff07fc58a72689782633b1be661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01ab75ae50a1a624185bfa014c66cfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a></td></tr>
+<tr class="separator:ad01ab75ae50a1a624185bfa014c66cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a0544c3fe466e421738dae463968b70ba">else</a></td></tr>
+<tr class="separator:a0544c3fe466e421738dae463968b70ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af483635343185572cba1f3f6b3ae6610"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#af483635343185572cba1f3f6b3ae6610">al_fixdiv</a></td></tr>
+<tr class="separator:af483635343185572cba1f3f6b3ae6610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b6976c5be1580f86dd6c83647e77cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a31b6976c5be1580f86dd6c83647e77cd">al_fixceil</a></td></tr>
+<tr class="separator:a31b6976c5be1580f86dd6c83647e77cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94eec075305949523ebacef79cfcdd43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a94eec075305949523ebacef79cfcdd43">al_fixtoi</a></td></tr>
+<tr class="separator:a94eec075305949523ebacef79cfcdd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d9154dc756850ed2d0f47a3628dfd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a03d9154dc756850ed2d0f47a3628dfd8">al_fixsin</a></td></tr>
+<tr class="separator:a03d9154dc756850ed2d0f47a3628dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33dc8aebb53adf65d64aaf02f041ab33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmaths_8inl.html#a33dc8aebb53adf65d64aaf02f041ab33">al_fixacos</a></td></tr>
+<tr class="separator:a33dc8aebb53adf65d64aaf02f041ab33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="a68082877191ea8b13e84fc7c1bac9c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68082877191ea8b13e84fc7c1bac9c7d">&#9670;&nbsp;</a></span>__al_included_allegro5_inline_fmaths_inl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __al_included_allegro5_inline_fmaths_inl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a212fd5cd1111c68a88623f17e1e4d2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212fd5cd1111c68a88623f17e1e4d2b9">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_ftofix&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(double <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt; 32767.0) { al_set_errno(ERANGE);return 0x7FFFFFFF;} if(x&lt; -32767.0) { al_set_errno(ERANGE);return -0x7FFFFFFF;} return(al_fixed)(x *65536.0+(x&lt; 0 ? -0.5 :0.5));}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f6d5a1431c89de8d088dfb0381426f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f6d5a1431c89de8d088dfb0381426f">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_fixadd&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> result=<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>;<a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(result &gt;=0) { <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>&lt; 0) &amp;&amp;(<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>&lt; 0)) { al_set_errno(ERANGE);return -0x7FFFFFFF;} else return result;} else { if((x &gt; 0) &amp;&amp;(y &gt; 0)) { al_set_errno(ERANGE);return 0x7FFFFFFF;} else return result;} }&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa63e403d22e06b6b3eb4dd9d70c45359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63e403d22e06b6b3eb4dd9d70c45359">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_fixmul&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> lx=<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>;<a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> ly=<a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>;<a class="el" href="alwatcom_8h.html#aa028d750c854cd520247fcab322e276c">int64_t</a> lres=(lx *ly);<a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(lres &gt; 0x7FFFFFFF0000LL) { al_set_errno(ERANGE);return 0x7FFFFFFF;} else if(lres&lt; -0x7FFFFFFF0000LL) { al_set_errno(ERANGE);return 0x80000000;} else { return(al_fixed)(lres &gt;&gt; 16);} }&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9895ed761ecc465d1ed6eb24eb9bcb7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9895ed761ecc465d1ed6eb24eb9bcb7a">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_fixfloor&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="fmaths_8inl.html#a8ad2d7d1a24282db868a211942368bd1">if</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt;=0) return(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt;&gt; 16);<a class="el" href="fmaths_8inl.html#a0544c3fe466e421738dae463968b70ba">else</a> return ~((~<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>) &gt;&gt; 16);}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94e2a4e4da25547bca9cb2e53e4d4e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e2a4e4da25547bca9cb2e53e4d4e8e">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_itofix&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(int <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ return <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>&lt;&lt; 16;}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819c331675fc56dbad3f5c31a52d58fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819c331675fc56dbad3f5c31a52d58fa">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_fixcos&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ return _al_fix_cos_tbl[((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+0x4000) &gt;&gt; 15) &amp;0x1FF];}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a914bc5a5d1a6a2fb2f1da16048169c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914bc5a5d1a6a2fb2f1da16048169c25">&#9670;&nbsp;</a></span>AL_INLINE() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> AL_INLINE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">al_fixtan&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ return _al_fix_tan_tbl[((<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>+0x4000) &gt;&gt; 15) &amp;0xFF];}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ad2d7d1a24282db868a211942368bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad2d7d1a24282db868a211942368bd1">&#9670;&nbsp;</a></span>if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> if </td>
+          <td>(</td>
+          <td class="paramtype">result &gt;=&#160;</td>
+          <td class="paramname"><em>0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a33dc8aebb53adf65d64aaf02f041ab33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33dc8aebb53adf65d64aaf02f041ab33">&#9670;&nbsp;</a></span>al_fixacos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> al_fixacos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31b6976c5be1580f86dd6c83647e77cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b6976c5be1580f86dd6c83647e77cd">&#9670;&nbsp;</a></span>al_fixceil</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> al_fixceil</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af483635343185572cba1f3f6b3ae6610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af483635343185572cba1f3f6b3ae6610">&#9670;&nbsp;</a></span>al_fixdiv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">al_fixdiv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03d9154dc756850ed2d0f47a3628dfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d9154dc756850ed2d0f47a3628dfd8">&#9670;&nbsp;</a></span>al_fixsin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> al_fixsin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55d08ff07fc58a72689782633b1be661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d08ff07fc58a72689782633b1be661">&#9670;&nbsp;</a></span>al_fixsub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> al_fixsub</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1e2c601fa27155cba5c96c6f7a541d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1e2c601fa27155cba5c96c6f7a541d6">&#9670;&nbsp;</a></span>al_fixtof</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">al_fixtof</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94eec075305949523ebacef79cfcdd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94eec075305949523ebacef79cfcdd43">&#9670;&nbsp;</a></span>al_fixtoi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> al_fixtoi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0544c3fe466e421738dae463968b70ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0544c3fe466e421738dae463968b70ba">&#9670;&nbsp;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wartość początkowa:</b><div class="fragment"><div class="line">{</div><div class="line">      <span class="keywordflow">if</span> ((<a class="code" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a> &gt; 0) &amp;&amp; (<a class="code" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a> &lt; 0)) {</div><div class="line">         al_set_errno(ERANGE);</div><div class="line">         <span class="keywordflow">return</span> 0x7FFFFFFF;</div><div class="line">      }</div><div class="line">      <span class="keywordflow">else</span></div><div class="line">         <span class="keywordflow">return</span> result</div><div class="ttc" id="fmaths_8inl_html_a7ba8ab2f1e8f362163e17da3f15a5db9"><div class="ttname"><a href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a></div><div class="ttdeci">al_fixed x</div><div class="ttdef"><b>Definition:</b> fmaths.inl:46</div></div>
+<div class="ttc" id="fmaths_8inl_html_ad01ab75ae50a1a624185bfa014c66cfa"><div class="ttname"><a href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a></div><div class="ttdeci">al_fixed al_fixed al_fixed y</div><div class="ttdef"><b>Definition:</b> fmaths.inl:75</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7ba8ab2f1e8f362163e17da3f15a5db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba8ab2f1e8f362163e17da3f15a5db9">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad01ab75ae50a1a624185bfa014c66cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01ab75ae50a1a624185bfa014c66cfa">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> <a class="el" href="fixed_8h.html#acaad2e927f969d9882d1e1e80ac1c5e2">al_fixed</a> y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2ec24ee4352d83bc7f106b157911ae22.html">PP2</a></li><li class="navelem"><a class="el" href="dir_90b44090e90ccec099edce015227bf64.html">packages</a></li><li class="navelem"><a class="el" href="dir_a2af61dbc3b6d19f2bf2c2409e9db10b.html">Allegro.5.2.7.1</a></li><li class="navelem"><a class="el" href="dir_d3cd4fdc2a6e64041b9f8d3986356a93.html">build</a></li><li class="navelem"><a class="el" href="dir_53244d09d2b12c6804e78a14256b4bd1.html">native</a></li><li class="navelem"><a class="el" href="dir_f8233e1854002409051003e6f65cd858.html">include</a></li><li class="navelem"><a class="el" href="dir_ceabdca1b2bc054fc64cb41151c1d866.html">allegro5</a></li><li class="navelem"><a class="el" href="dir_96bd1bbbe4be340a3196812022d4af63.html">inline</a></li><li class="navelem"><a class="el" href="fmaths_8inl.html">fmaths.inl</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PP2: Multistream specific encoder and decoder CTLs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PP2
+   </div>
+   <div id="projectbrief">Gra Saper</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__opus__multistream__ctls.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a>  </div>
+  <div class="headertitle">
+<div class="title">Multistream specific encoder and decoder CTLs</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>These are convenience macros that are specific to the <a class="el" href="group__opus__multistream.html#ga0f8756c84c7c62a38f99fb5cd6ed68af" title="Perform a CTL function on a multistream Opus encoder.">opus_multistream_encoder_ctl()</a> and <a class="el" href="group__opus__multistream.html#ga3c6402c3bb276d7a152d9934ce948431" title="Perform a CTL function on a multistream Opus decoder.">opus_multistream_decoder_ctl()</a> interface.  
+<a href="#details">Więcej...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:ga4e67607eb691c4314a5de90d8c58aff0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__opus__multistream__ctls.html#ga4e67607eb691c4314a5de90d8c58aff0">OPUS_MULTISTREAM_GET_ENCODER_STATE</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>,  <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>)</td></tr>
+<tr class="memdesc:ga4e67607eb691c4314a5de90d8c58aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the encoder state for an individual stream of a multistream encoder.  <a href="#ga4e67607eb691c4314a5de90d8c58aff0">Więcej...</a><br /></td></tr>
+<tr class="separator:ga4e67607eb691c4314a5de90d8c58aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0843831519b4d9b9d73391afef04a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__opus__multistream__ctls.html#gaf0843831519b4d9b9d73391afef04a53">OPUS_MULTISTREAM_GET_DECODER_STATE</a>(<a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>,  <a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>)</td></tr>
+<tr class="memdesc:gaf0843831519b4d9b9d73391afef04a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the decoder state for an individual stream of a multistream decoder.  <a href="#gaf0843831519b4d9b9d73391afef04a53">Więcej...</a><br /></td></tr>
+<tr class="separator:gaf0843831519b4d9b9d73391afef04a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<p>These are convenience macros that are specific to the <a class="el" href="group__opus__multistream.html#ga0f8756c84c7c62a38f99fb5cd6ed68af" title="Perform a CTL function on a multistream Opus encoder.">opus_multistream_encoder_ctl()</a> and <a class="el" href="group__opus__multistream.html#ga3c6402c3bb276d7a152d9934ce948431" title="Perform a CTL function on a multistream Opus decoder.">opus_multistream_decoder_ctl()</a> interface. </p>
+<p>The CTLs from <a class="el" href="group__opus__genericctls.html">Generic CTLs</a>, <a class="el" href="group__opus__encoderctls.html">Encoder related CTLs</a>, and <a class="el" href="group__opus__decoderctls.html">Decoder related CTLs</a> may be applied to a multistream encoder or decoder as well. In addition, you may retrieve the encoder or decoder state for an specific stream via <a class="el" href="group__opus__multistream__ctls.html#ga4e67607eb691c4314a5de90d8c58aff0" title="Gets the encoder state for an individual stream of a multistream encoder.">OPUS_MULTISTREAM_GET_ENCODER_STATE</a> or <a class="el" href="group__opus__multistream__ctls.html#gaf0843831519b4d9b9d73391afef04a53" title="Gets the decoder state for an individual stream of a multistream decoder.">OPUS_MULTISTREAM_GET_DECODER_STATE</a> and apply CTLs to it individually. </p>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="gaf0843831519b4d9b9d73391afef04a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0843831519b4d9b9d73391afef04a53">&#9670;&nbsp;</a></span>OPUS_MULTISTREAM_GET_DECODER_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPUS_MULTISTREAM_GET_DECODER_STATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the decoder state for an individual stream of a multistream decoder. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td><code>opus_int32</code>: The index of the stream whose decoder you wish to retrieve. This must be non-negative and less than the <code>streams</code> parameter used to initialize the decoder. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td><code>OpusDecoder**</code>: Returns a pointer to the given decoder state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OPUS_BAD_ARG</td><td>The index of the requested stream was out of range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4e67607eb691c4314a5de90d8c58aff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e67607eb691c4314a5de90d8c58aff0">&#9670;&nbsp;</a></span>OPUS_MULTISTREAM_GET_ENCODER_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPUS_MULTISTREAM_GET_ENCODER_STATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="fmaths_8inl.html#a7ba8ab2f1e8f362163e17da3f15a5db9">x</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="fmaths_8inl.html#ad01ab75ae50a1a624185bfa014c66cfa">y</a>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the encoder state for an individual stream of a multistream encoder. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td><code>opus_int32</code>: The index of the stream whose encoder you wish to retrieve. This must be non-negative and less than the <code>streams</code> parameter used to initialize the encoder. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td><code>OpusEncoder**</code>: Returns a pointer to the given encoder state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OPUS_BAD_ARG</td><td>The index of the requested stream was out of range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>
